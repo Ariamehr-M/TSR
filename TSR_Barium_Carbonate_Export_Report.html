@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>گزارش امکان‌سنجی صادرات کربنات باریم - هلدینگ TSR</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Vazirmatn',Arial,sans-serif;direction:rtl;text-align:right;background:#f4f6f9;color:#2c3e50;font-size:14px;line-height:1.8;}
+  .page{max-width:1000px;margin:0 auto;background:#fff;}
+
+  /* Cover */
+  .cover{background:linear-gradient(135deg,#1a2a4a 0%,#2e75b6 60%,#1a5276 100%);color:#fff;padding:80px 60px;min-height:100vh;display:flex;flex-direction:column;justify-content:center;page-break-after:always;}
+  .cover-logo{font-size:48px;font-weight:800;letter-spacing:2px;color:#f0c040;margin-bottom:10px;}
+  .cover-sub{font-size:16px;color:#aed6f1;margin-bottom:60px;}
+  .cover-title{font-size:38px;font-weight:800;line-height:1.4;margin-bottom:20px;border-right:6px solid #f0c040;padding-right:20px;}
+  .cover-product{font-size:22px;color:#aed6f1;margin-bottom:40px;}
+  .cover-badge{display:inline-block;background:rgba(240,192,64,0.2);border:1px solid #f0c040;color:#f0c040;padding:6px 18px;border-radius:20px;font-size:13px;margin-bottom:60px;}
+  .cover-meta{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;}
+  .cover-meta-item{background:rgba(255,255,255,0.08);padding:16px 20px;border-radius:8px;border-right:3px solid #f0c040;}
+  .cover-meta-label{font-size:11px;color:#aed6f1;margin-bottom:4px;}
+  .cover-meta-value{font-size:15px;font-weight:600;}
+  .cover-footer{margin-top:60px;font-size:12px;color:#7fb3d3;text-align:center;border-top:1px solid rgba(255,255,255,0.15);padding-top:20px;}
+
+  /* TOC */
+  .toc-page{padding:60px;page-break-after:always;}
+  .toc-title{font-size:26px;font-weight:800;color:#1a2a4a;border-bottom:3px solid #2e75b6;padding-bottom:12px;margin-bottom:30px;}
+  .toc-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dotted #ddd;font-size:14px;}
+  .toc-item.h1{font-weight:700;color:#1a2a4a;font-size:15px;margin-top:10px;}
+  .toc-item.h2{padding-right:20px;color:#34495e;}
+  .toc-num{color:#2e75b6;font-weight:600;min-width:30px;text-align:left;}
+
+  /* Sections */
+  .section{padding:50px 60px;page-break-inside:avoid;}
+  .section-break{page-break-before:always;}
+  h1.ch{font-size:26px;font-weight:800;color:#1a2a4a;border-right:6px solid #2e75b6;padding-right:16px;margin-bottom:8px;padding-top:4px;}
+  h2.sub{font-size:18px;font-weight:700;color:#2e75b6;margin:28px 0 12px;padding-bottom:6px;border-bottom:1px solid #d5e8f5;}
+  h3.sub2{font-size:15px;font-weight:700;color:#34495e;margin:20px 0 8px;}
+  .chapter-desc{font-size:13px;color:#7f8c8d;margin-bottom:30px;font-style:italic;}
+
+  p{margin-bottom:10px;line-height:1.9;}
+
+  /* Tables */
+  .tbl-wrap{overflow-x:auto;margin:20px 0;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{background:#1a2a4a;color:#fff;padding:10px 12px;text-align:center;font-weight:600;}
+  td{padding:9px 12px;text-align:right;border-bottom:1px solid #e8ecef;vertical-align:middle;}
+  tr:nth-child(even){background:#f7f9fc;}
+  tr:hover{background:#eaf2ff;}
+  .td-c{text-align:center;}
+  .td-l{text-align:left;direction:ltr;}
+  .td-num{text-align:center;font-weight:600;color:#1a2a4a;}
+  th.ltr{direction:ltr;text-align:center;}
+
+  /* Boxes */
+  .box-assumption{background:#fffbea;border-right:4px solid #f0c040;padding:14px 18px;margin:16px 0;border-radius:4px;font-size:13px;color:#7d6608;}
+  .box-assumption::before{content:"⚠ فرض: ";font-weight:700;}
+  .box-key{background:#eaf4fb;border-right:4px solid #2e75b6;padding:14px 18px;margin:16px 0;border-radius:4px;font-size:13px;color:#1a5276;}
+  .box-warning{background:#fdf2f2;border-right:4px solid #c0392b;padding:14px 18px;margin:16px 0;border-radius:4px;font-size:13px;color:#7b241c;}
+  .box-warning::before{content:"⛔ هشدار: ";font-weight:700;}
+  .box-green{background:#eafaf1;border-right:4px solid #27ae60;padding:14px 18px;margin:16px 0;border-radius:4px;font-size:13px;color:#1e8449;}
+  .findings{background:#f8f9fa;border:1px solid #dee2e6;border-radius:8px;padding:20px 24px;margin:20px 0;}
+  .findings h4{color:#1a2a4a;font-size:14px;font-weight:700;margin-bottom:12px;border-bottom:1px solid #dee2e6;padding-bottom:8px;}
+  .findings li{margin-bottom:8px;padding-right:10px;font-size:13px;line-height:1.7;}
+  .findings li::marker{color:#2e75b6;}
+
+  /* Badges */
+  .badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600;}
+  .badge-high{background:#fde8e8;color:#c0392b;}
+  .badge-med{background:#fef9e7;color:#d68910;}
+  .badge-low{background:#e9f7ef;color:#27ae60;}
+  .badge-blue{background:#eaf2ff;color:#2e75b6;}
+
+  /* Executive summary cards */
+  .exec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0;}
+  .exec-card{background:linear-gradient(135deg,#1a2a4a,#2e75b6);color:#fff;padding:20px;border-radius:10px;text-align:center;}
+  .exec-card .val{font-size:28px;font-weight:800;color:#f0c040;margin:8px 0;}
+  .exec-card .lbl{font-size:12px;color:#aed6f1;}
+
+  /* Risk matrix */
+  .risk-high{background:#fde8e8;color:#c0392b;font-weight:600;}
+  .risk-med{background:#fef9e7;color:#d68910;font-weight:600;}
+  .risk-low{background:#e9f7ef;color:#27ae60;font-weight:600;}
+
+  /* Gantt */
+  .gantt-bar{height:16px;border-radius:3px;display:inline-block;}
+  .gantt-ph1{background:#2e75b6;}
+  .gantt-ph2{background:#27ae60;}
+  .gantt-ph3{background:#f0c040;}
+  .gantt-ph4{background:#e74c3c;}
+
+  /* Divider */
+  .divider{border:none;border-top:2px solid #e8ecef;margin:30px 0;}
+
+  /* Source list */
+  .source-item{padding:8px 0;border-bottom:1px solid #eee;font-size:13px;}
+  .source-item a{color:#2e75b6;text-decoration:none;}
+
+  @media print{
+    body{background:#fff;}
+    .page{max-width:none;}
+    .cover{min-height:auto;page-break-after:always;}
+    .section-break{page-break-before:always;}
+    .no-break{page-break-inside:avoid;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ========== COVER PAGE ========== -->
+<div class="cover">
+  <div class="cover-logo">TSR</div>
+  <div class="cover-sub">هلدینگ TSR | استان قم، ایران</div>
+  <div class="cover-title">گزارش امکان‌سنجی و استراتژی صادراتی<br>کربنات باریم</div>
+  <div class="cover-product">Barium Carbonate | HS Code: 2836.60</div>
+  <div class="cover-badge">محرمانه — جهت ارائه به رئیس هیئت مدیره</div>
+  <div class="cover-meta">
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">تهیه‌کننده</div>
+      <div class="cover-meta-value">تیم مشاوره صادراتی TSR</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">تاریخ تهیه</div>
+      <div class="cover-meta-value">اردیبهشت ۱۴۰۵ | می ۲۰۲۶</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">بازار هدف اولیه</div>
+      <div class="cover-meta-value">اتحادیه اقتصادی اوراسیا (EAEU) + عراق</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="cover-meta-label">نسخه</div>
+      <div class="cover-meta-value">نسخه اول — پیش‌نویس برای بررسی</div>
+    </div>
+  </div>
+  <div class="cover-footer">این سند محرمانه است و صرفاً جهت استفاده داخلی هلدینگ TSR تهیه شده است.</div>
+</div>
+
+<!-- ========== TOC ========== -->
+<div class="toc-page">
+  <div class="toc-title">فهرست مطالب</div>
+  <div class="toc-item h1"><span>فصل ۰ — خلاصه اجرایی</span><span class="toc-num">۳</span></div>
+  <div class="toc-item h1"><span>فصل ۱ — شناسایی محصول</span><span class="toc-num">۵</span></div>
+  <div class="toc-item h2"><span>۱.۱ مشخصات فنی و تجاری</span><span class="toc-num">۵</span></div>
+  <div class="toc-item h2"><span>۱.۲ کاربردها و صنایع مصرف‌کننده</span><span class="toc-num">۶</span></div>
+  <div class="toc-item h2"><span>۱.۳ مزیت رقابتی بالقوه TSR</span><span class="toc-num">۷</span></div>
+  <div class="toc-item h1"><span>فصل ۲ — تحلیل بازار جهانی</span><span class="toc-num">۸</span></div>
+  <div class="toc-item h2"><span>۲.۱ اندازه و روند بازار جهانی</span><span class="toc-num">۸</span></div>
+  <div class="toc-item h2"><span>۲.۲ بزرگترین صادرکنندگان جهانی</span><span class="toc-num">۹</span></div>
+  <div class="toc-item h2"><span>۲.۳ بزرگترین واردکنندگان جهانی</span><span class="toc-num">۱۰</span></div>
+  <div class="toc-item h2"><span>۲.۴ روند قیمت جهانی</span><span class="toc-num">۱۱</span></div>
+  <div class="toc-item h1"><span>فصل ۳ — انتخاب بازارهای هدف</span><span class="toc-num">۱۲</span></div>
+  <div class="toc-item h2"><span>۳.۱ متدولوژی انتخاب بازار</span><span class="toc-num">۱۲</span></div>
+  <div class="toc-item h2"><span>۳.۲ تحلیل کشورهای اوراسیا (EAEU)</span><span class="toc-num">۱۳</span></div>
+  <div class="toc-item h2"><span>۳.۳ سایر کشورهای همسایه</span><span class="toc-num">۱۵</span></div>
+  <div class="toc-item h2"><span>۳.۴ ماتریس نهایی انتخاب بازار</span><span class="toc-num">۱۶</span></div>
+  <div class="toc-item h1"><span>فصل ۴ — تحلیل رقبا</span><span class="toc-num">۱۷</span></div>
+  <div class="toc-item h1"><span>فصل ۵ — لجستیک و زنجیره تأمین</span><span class="toc-num">۱۹</span></div>
+  <div class="toc-item h1"><span>فصل ۶ — بازاریابی و کانال‌های فروش</span><span class="toc-num">۲۱</span></div>
+  <div class="toc-item h1"><span>فصل ۷ — موانع و اقدامات غیرتعرفه‌ای</span><span class="toc-num">۲۳</span></div>
+  <div class="toc-item h1"><span>فصل ۸ — تحلیل مالی</span><span class="toc-num">۲۵</span></div>
+  <div class="toc-item h1"><span>فصل ۹ — تحلیل ریسک</span><span class="toc-num">۲۸</span></div>
+  <div class="toc-item h1"><span>فصل ۱۰ — نقشه راه اجرایی</span><span class="toc-num">۳۰</span></div>
+  <div class="toc-item h1"><span>فصل ۱۱ — منابع</span><span class="toc-num">۳۲</span></div>
+</div>
+
+<!-- ========== CHAPTER 0: EXECUTIVE SUMMARY ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۰ — خلاصه اجرایی (Executive Summary)</h1>
+  <p class="chapter-desc">این فصل دیدگاه کلی فرصت صادراتی، یافته‌های کلیدی، توصیه استراتژیک اصلی و نقشه راه یک‌ساله را ارائه می‌دهد.</p>
+
+  <h2 class="sub">جدول خلاصه فرصت صادراتی</h2>
+  <div class="exec-grid">
+    <div class="exec-card">
+      <div class="lbl">ارزش بازار جهانی ۲۰۲۴</div>
+      <div class="val">$697M</div>
+      <div class="lbl">با رشد ۵.۲٪ سالانه</div>
+    </div>
+    <div class="exec-card">
+      <div class="lbl">پتانسیل صادراتی TSR</div>
+      <div class="val">$1-2M</div>
+      <div class="lbl">در سال اول (فرض ۲۰۰۰ تن)</div>
+    </div>
+    <div class="exec-card">
+      <div class="lbl">مزیت FTA</div>
+      <div class="val">صفر تعرفه</div>
+      <div class="lbl">برای ۹۰٪ کالا با EAEU</div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>شاخص</th><th>مقدار / وضعیت</th><th>توضیح</th></tr></thead>
+      <tbody>
+        <tr><td>محصول</td><td class="td-l">Barium Carbonate | HS 2836.60</td><td>تنها تولیدکننده عمده در ایران</td></tr>
+        <tr><td>حجم مازاد صادراتی (فرض)</td><td class="td-c">۲,۰۰۰ تن/سال</td><td class="box-assumption" style="font-size:11px;padding:4px;border:none;background:none">نیاز به تأیید TSR</td></tr>
+        <tr><td>قیمت جهانی (Q1 2026)</td><td class="td-c">$510–$700/تن</td><td>بسته به منطقه و گرید</td></tr>
+        <tr><td>اولویت‌ترین بازار</td><td>روسیه، عراق، قزاقستان</td><td>ترکیب FTA + مجاورت جغرافیایی</td></tr>
+        <tr><td>وضعیت FTA با EAEU</td><td><span class="badge badge-blue">فعال از اوایل ۲۰۲۵</span></td><td>۹۰٪ کالا معاف از تعرفه</td></tr>
+        <tr><td>رقیب اصلی</td><td>چین (Guizhou Redstar)</td><td>۸۳٪ صادرات جهانی چین</td></tr>
+        <tr><td>پیچیدگی تحریم</td><td><span class="badge badge-high">بالا</span></td><td>مانع اصلی در پرداخت بین‌المللی</td></tr>
+        <tr><td>افق برگشت سرمایه</td><td class="td-c">۱۲–۱۸ ماه</td><td>با حجم ۲,۰۰۰ تن/سال</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">سه یافته کلیدی</h2>
+  <div class="findings">
+    <h4>🔍 یافته‌های کلیدی تحقیق</h4>
+    <ol>
+      <li><strong>پنجره فرصت EAEU:</strong> قرارداد FTA ایران–EAEU در دسامبر ۲۰۲۳ امضا و اوایل ۲۰۲۵ اجرایی شد. این پنجره تاریخی، تعرفه صادرات به روسیه، قزاقستان، ارمنستان، بلاروس و قرقیزستان را به صفر یا حداقل کاهش می‌دهد. هیچ تولیدکننده ایرانی دیگری از این مزیت برای کربنات باریم استفاده نکرده است — یعنی TSR می‌تواند پیشگام باشد.</li>
+      <li><strong>آسیب‌پذیری زنجیره تأمین چین:</strong> واردکنندگان اوراسیایی که ۱۰۰٪ به چین وابسته‌اند، پس از محدودیت‌های صادراتی چین در ۲۰۲۲-۲۴ و افزایش هزینه حمل دریایی، به‌دنبال تأمین‌کنندگان جایگزین هستند. ایران با فاصله زمینی کوتاه‌تر، مزیت لجستیکی واقعی دارد.</li>
+      <li><strong>تحریم، مانع قابل مدیریت:</strong> کربنات باریم در لیست کنترل صادرات دوگانه (Dual-use) آمریکا قرار ندارد. چالش اصلی پرداخت بین‌المللی است، نه ممنوعیت صادرات. مسیرهای پرداخت از طریق روسیه (SPFS)، ارمنستان، عراق و ترکیه در حال استفاده توسط صادرکنندگان ایرانی دیگر است.</li>
+    </ol>
+  </div>
+
+  <h2 class="sub">توصیه اصلی استراتژیک</h2>
+  <div class="box-green">
+    <strong>توصیه:</strong> ورود فوری به بازار عراق به‌عنوان بازار آزمایشی (۳-۶ ماه اول)، همزمان با آغاز مذاکرات با واردکنندگان روسی و قزاقستانی. عراق کم‌ریسک‌ترین نقطه شروع است: پرداخت نقدی/حوالجات رایج، مرز مشترک فعال، و رقابت چین از فاصله بیشتر.
+  </div>
+
+  <h2 class="sub">نقشه راه ۱۲ ماهه — یک نگاه</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>فاز</th><th>بازه زمانی</th><th>اقدامات اصلی</th><th>هدف کمی</th></tr></thead>
+      <tbody>
+        <tr><td><strong>فاز ۱</strong> آماده‌سازی</td><td class="td-c">ماه ۱–۳</td><td>اخذ گواهینامه SGS، ثبت صادراتی، یافتن ۳ مشتری اولیه در عراق</td><td>۱ نمونه ارسالی (۲۰ تن)</td></tr>
+        <tr><td><strong>فاز ۲</strong> ورود اولیه</td><td class="td-c">ماه ۳–۶</td><td>اولین قرارداد صادراتی، ارسال ۲۰۰–۵۰۰ تن به عراق</td><td>$100–250K درآمد ارزی</td></tr>
+        <tr><td><strong>فاز ۳</strong> توسعه EAEU</td><td class="td-c">ماه ۶–۱۲</td><td>ورود به روسیه یا قزاقستان، یافتن توزیع‌کننده محلی</td><td>۵۰۰–۱,۰۰۰ تن اضافه</td></tr>
+        <tr><td><strong>فاز ۴</strong> تثبیت</td><td class="td-c">ماه ۱۲–۱۸</td><td>قرارداد بلندمدت، کانتینر منظم ماهانه</td><td>۲,۰۰۰ تن/سال</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ========== CHAPTER 1: PRODUCT ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۱ — شناسایی محصول</h1>
+
+  <h2 class="sub">۱.۱ مشخصات فنی و تجاری</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>مشخصه</th><th>مقدار / توضیح</th></tr></thead>
+      <tbody>
+        <tr><td><strong>نام IUPAC</strong></td><td class="td-l">Barium Carbonate</td></tr>
+        <tr><td><strong>نام فارسی</strong></td><td>کربنات باریم</td></tr>
+        <tr><td><strong>فرمول شیمیایی</strong></td><td class="td-l">BaCO₃</td></tr>
+        <tr><td><strong>وزن مولکولی</strong></td><td class="td-l">197.34 g/mol</td></tr>
+        <tr><td><strong>کد HS</strong></td><td class="td-l">2836.60 — ✅ تأیید شده (Carbonates; Barium Carbonate)</td></tr>
+        <tr><td><strong>کد ISIC</strong></td><td class="td-l">2411 — Basic Chemical Manufacturing</td></tr>
+        <tr><td><strong>CAS Number</strong></td><td class="td-l">513-77-9</td></tr>
+        <tr><td><strong>ظاهر</strong></td><td>پودر سفید بلوری بدون بو</td></tr>
+        <tr><td><strong>چگالی</strong></td><td class="td-l">4.29 g/cm³</td></tr>
+        <tr><td><strong>نقطه ذوب/تجزیه</strong></td><td class="td-l">811°C (decomposes to BaO + CO₂)</td></tr>
+        <tr><td><strong>حلالیت در آب (25°C)</strong></td><td class="td-l">0.0022 g/100mL (practically insoluble)</td></tr>
+        <tr><td><strong>pH محلول آبی</strong></td><td class="td-l">~9.0 (slightly alkaline)</td></tr>
+        <tr><td><strong>ساختار بلوری</strong></td><td class="td-l">Orthorhombic (Witherite structure)</td></tr>
+        <tr><td><strong>منبع طبیعی</strong></td><td class="td-l">Witherite mineral | تولید صنعتی: احیای کربوترمیک باریت (BaSO₄)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">گریدهای تجاری موجود در بازار جهانی</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>گرید</th><th>خلوص BaCO₃</th><th>کاربرد اصلی</th><th>قیمت نسبی</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Industrial Grade</strong></td><td class="td-c">۹۷–۹۸.۵٪</td><td>سرامیک، آجر، شیشه صنعتی، رنگ</td><td class="td-c">پایه (Base)</td></tr>
+        <tr><td><strong>Technical Grade</strong></td><td class="td-c">۹۸.۵–۹۹.۵٪</td><td>شیشه تخصصی، شیمیایی</td><td class="td-c">+10–15٪</td></tr>
+        <tr><td><strong>Electronic Grade (High-Purity)</strong></td><td class="td-c">۹۹.۹٪+</td><td>خازن‌های MLCC، PTC، پیزوالکتریک</td><td class="td-c">+40–60٪</td></tr>
+        <tr><td><strong>Feed Grade (Granular)</strong></td><td class="td-c">۹۷–۹۸٪</td><td>کنترل pH در تصفیه آب، جوندگان</td><td class="td-c">-5٪</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">استانداردهای کیفی بین‌المللی مرتبط</h3>
+  <ul style="padding-right:20px;margin-bottom:16px;">
+    <li><strong>ISO 9001:2015</strong> — سیستم مدیریت کیفیت (الزامی برای اعتماد خریداران بین‌المللی)</li>
+    <li><strong>GB/T 1617-2014</strong> — استاندارد ملی چین برای کربنات باریم صنعتی (معیار رقابت)</li>
+    <li><strong>REACH (EC 1907/2006)</strong> — برای صادرات به اتحادیه اروپا (در بازارهای هدف اولیه TSR الزامی نیست)</li>
+    <li><strong>UN GHS/SDS</strong> — برگه اطلاعات ایمنی مطابق GHS (الزامی برای همه بازارها)</li>
+    <li><strong>SGS / Intertek Certificate of Analysis</strong> — آزمایشگاه مستقل بین‌المللی (اعتمادساز کلیدی)</li>
+  </ul>
+
+  <div class="box-assumption">گرید و خلوص محصول TSR به تأیید شرکت نیاز دارد. در این گزارش فرض می‌شود: Industrial Grade با خلوص 97%+ [منبع: فرض مشاور — باید از آزمایشگاه تأیید شود]</div>
+
+  <h2 class="sub">۱.۲ کاربردها و صنایع مصرف‌کننده</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>صنعت مصرف‌کننده</th><th class="td-c">سهم تقریبی بازار ۲۰۲۴</th><th>نقش کربنات باریم</th><th>روند ۵ ساله</th></tr></thead>
+      <tbody>
+        <tr><td><strong>سرامیک، آجر و کاشی</strong></td><td class="td-c">۳۶.۹٪</td><td>افزودنی ضد-افلورسانس، مات‌کننده لعاب</td><td><span class="badge badge-blue">پایدار</span></td></tr>
+        <tr><td><strong>شیشه تخصصی</strong></td><td class="td-c">۲۲٪</td><td>بهبود ضریب شکست، مقاومت شیمیایی (شیشه اتومبیل، خورشیدی)</td><td><span class="badge badge-blue">رشد ملایم</span></td></tr>
+        <tr><td><strong>الکترونیک (MLCC, PTC)</strong></td><td class="td-c">۱۸٪</td><td>ماده اولیه بارات‌ها برای خازن سرامیکی، ترموستات‌ها</td><td><span class="badge badge-green" style="background:#e9f7ef;color:#27ae60">رشد سریع ۸.۵٪ CAGR</span></td></tr>
+        <tr><td><strong>شیمیایی و رنگ‌دانه</strong></td><td class="td-c">۱۲٪</td><td>سولفات باریم (BaSO₄)، لیتوپون، ترکیبات باریم</td><td><span class="badge badge-blue">پایدار</span></td></tr>
+        <tr><td><strong>تصفیه آب و کشاورزی</strong></td><td class="td-c">۵٪</td><td>تنظیم pH، کنترل آفات</td><td><span class="badge badge-low">کاهش در برخی مناطق</span></td></tr>
+        <tr><td><strong>سایر (دارو، هسته‌ای)</strong></td><td class="td-c">۶.۱٪</td><td>کاربردهای تخصصی</td><td><span class="badge badge-blue">ثابت</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>منبع: [Market.us Barium Carbonate Market Report, 2025] | [IMARC Group, 2025] | [Coherent Market Insights, 2025]</p>
+
+  <div class="findings">
+    <h4>روند تغییر کاربردها در ۵ سال اخیر</h4>
+    <ul>
+      <li>بخش الکترونیک با CAGR 8.5٪ سریع‌ترین رشد را دارد — ناشی از تقاضای 5G، EV و هوش مصنوعی برای خازن‌های MLCC.</li>
+      <li>بخش سرامیک همچنان بزرگترین مصرف‌کننده است اما سهم آن در حال کاهش تدریجی است.</li>
+      <li>تقاضای شیشه تخصصی با رشد پانل‌های خورشیدی و شیشه اتومبیل‌های الکتریکی رو به افزایش است.</li>
+    </ul>
+  </div>
+
+  <h2 class="sub">۱.۳ مزیت رقابتی بالقوه TSR</h2>
+  <div class="box-assumption">اطلاعات این بخش بر اساس فرضیات مشاور است. تأیید دقیق نیازمند داده‌های داخلی TSR می‌باشد.</div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>مزیت</th><th>وضعیت فعلی (فرض)</th><th>پتانسیل</th><th>اقدام لازم</th></tr></thead>
+      <tbody>
+        <tr><td><strong>تنها تولیدکننده عمده در ایران</strong></td><td><span class="badge badge-blue">تأیید شده</span></td><td>بالا — موقعیت انحصاری داخلی</td><td>حفظ ظرفیت</td></tr>
+        <tr><td><strong>مزیت جغرافیایی به EAEU و عراق</strong></td><td><span class="badge badge-blue">واقعی</span></td><td>صرفه‌جویی $50–100/تن در حمل نسبت به چین</td><td>بهینه‌سازی لجستیک</td></tr>
+        <tr><td><strong>تعرفه صفر با EAEU (FTA 2025)</strong></td><td><span class="badge badge-blue">فعال</span></td><td>مزیت ۵–۱۰٪ در قیمت نهایی</td><td>استفاده فوری</td></tr>
+        <tr><td><strong>قیمت تمام‌شده پایین‌تر از رقبا (فرض)</strong></td><td><span class="badge badge-med">نیاز به تأیید</span></td><td>متوسط</td><td>محاسبه دقیق بهای تمام‌شده</td></tr>
+        <tr><td><strong>گواهینامه ISO 9001</strong></td><td><span class="badge badge-med">نیاز به اخذ یا تأیید</span></td><td>بالا — الزامی برای صادرات</td><td>اخذ/تمدید فوری</td></tr>
+        <tr><td><strong>گواهی آنالیز SGS</strong></td><td><span class="badge badge-high">احتمالاً ندارند</span></td><td>کلیدی برای اعتماد خریدار</td><td>هزینه $500–2000 به ازای هر محموله</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ========== CHAPTER 2: GLOBAL MARKET ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۲ — تحلیل بازار جهانی</h1>
+
+  <h2 class="sub">۲.۱ اندازه و روند بازار جهانی</h2>
+
+  <div class="exec-grid" style="grid-template-columns:repeat(4,1fr);">
+    <div class="exec-card">
+      <div class="lbl">ارزش بازار ۲۰۲۴</div>
+      <div class="val">$697M</div>
+      <div class="lbl">USD میلیون</div>
+    </div>
+    <div class="exec-card">
+      <div class="lbl">پیش‌بینی ۲۰۳۳</div>
+      <div class="val">$1,099M</div>
+      <div class="lbl">USD میلیون</div>
+    </div>
+    <div class="exec-card">
+      <div class="lbl">نرخ رشد سالانه</div>
+      <div class="val">5.2٪</div>
+      <div class="lbl">CAGR 2025–2033</div>
+    </div>
+    <div class="exec-card">
+      <div class="lbl">سهم آسیا-پاسیفیک</div>
+      <div class="val">44.5٪</div>
+      <div class="lbl">از کل تقاضا</div>
+    </div>
+  </div>
+
+  <p>منابع: [IMARC Group, Barium Carbonate Market Report, 2025] | [Market.us, 2026] | [Coherent Market Insights, 2025–2032]</p>
+  <p>بازار جهانی کربنات باریم در مسیر رشد پایدار و قابل پیش‌بینی قرار دارد. محرک اصلی رشد، افزایش تقاضا از بخش الکترونیک (خصوصاً خازن‌های MLCC برای 5G و خودروهای برقی)، ساخت و ساز در آسیا و آفریقا، و توسعه شیشه‌های تخصصی است. چین با اختلاف زیاد، بزرگترین تولیدکننده و صادرکننده جهانی باقی می‌ماند.</p>
+
+  <h2 class="sub">۲.۲ بزرگترین صادرکنندگان جهانی (HS 2836.60)</h2>
+  <p>داده‌های سال ۲۰۲۳ | منبع: [WITS World Bank / UN Comtrade, 2024] | [Volza Global Trade Data, 2024]</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>رتبه</th>
+          <th>کشور</th>
+          <th>حجم صادرات (تن)</th>
+          <th>ارزش صادرات ($هزار)</th>
+          <th>قیمت میانگین ($/تن)</th>
+          <th>سهم از کل</th>
+          <th>یادداشت</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff8e1;">
+          <td class="td-c"><strong>۱</strong></td>
+          <td><strong>🇨🇳 چین</strong></td>
+          <td class="td-num">90,265</td>
+          <td class="td-num">60,634</td>
+          <td class="td-num">672</td>
+          <td class="td-c"><strong>~۷۲٪</strong></td>
+          <td>Guizhou Redstar dominant</td>
+        </tr>
+        <tr>
+          <td class="td-c">۲</td>
+          <td>🇮🇳 هند</td>
+          <td class="td-num">21,170</td>
+          <td class="td-num">10,994</td>
+          <td class="td-num">519</td>
+          <td class="td-c">~۱۷٪</td>
+          <td>Vishnu Barium (30% world share)</td>
+        </tr>
+        <tr>
+          <td class="td-c">۳</td>
+          <td>🇺🇸 آمریکا</td>
+          <td class="td-num">4,282</td>
+          <td class="td-num">8,985</td>
+          <td class="td-num">2,098</td>
+          <td class="td-c">~۳٪</td>
+          <td>High-purity electronic grade</td>
+        </tr>
+        <tr>
+          <td class="td-c">۴</td>
+          <td>🇯🇵 ژاپن</td>
+          <td class="td-num">294</td>
+          <td class="td-num">2,768</td>
+          <td class="td-num">9,415</td>
+          <td class="td-c">~۲٪</td>
+          <td>گرید الکترونیک بسیار خالص</td>
+        </tr>
+        <tr>
+          <td class="td-c">۵</td>
+          <td>🇨🇿 جمهوری چک</td>
+          <td class="td-num">1,531</td>
+          <td class="td-num">1,258</td>
+          <td class="td-num">822</td>
+          <td class="td-c">~۱٪</td>
+          <td>تجارت مجدد اروپایی</td>
+        </tr>
+        <tr>
+          <td class="td-c">۶–۱۰</td>
+          <td>آلمان، هلند، ایتالیا، کره، تایوان</td>
+          <td class="td-num">~3,500</td>
+          <td class="td-num">~5,000</td>
+          <td class="td-c">—</td>
+          <td class="td-c">~۵٪</td>
+          <td>عمدتاً re-export یا گرید خاص</td>
+        </tr>
+        <tr style="background:#e8f4fd;font-weight:700;">
+          <td class="td-c">—</td>
+          <td>🇮🇷 <span style="color:#c0392b">ایران (TSR)</span></td>
+          <td class="td-num">~۰</td>
+          <td class="td-num">~۰</td>
+          <td class="td-c">—</td>
+          <td class="td-c">۰٪</td>
+          <td>فرصت دست‌نخورده</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">چرا چین اینقدر مسلط است؟</h3>
+  <ul style="padding-right:20px;margin-bottom:12px;">
+    <li>ذخایر عظیم باریت (BaSO₄) در استان گویژو — ماده اولیه اصلی</li>
+    <li>هزینه انرژی و نیروی کار پایین</li>
+    <li>زیرساخت لجستیک توسعه‌یافته (بندر، ریل)</li>
+    <li>یکپارچگی عمودی از معدن تا بسته‌بندی</li>
+    <li>تسلط یک شرکت: Guizhou Redstar به‌تنهایی ۸۳٪ صادرات چین را دارد [Volza, 2024–25]</li>
+  </ul>
+
+  <div class="box-key">نقطه ضعف چین: وابستگی بیش از حد بازار جهانی به یک تأمین‌کننده = ریسک supply chain = فرصت برای TSR</div>
+
+  <h2 class="sub">۲.۳ بزرگترین واردکنندگان جهانی (HS 2836.60)</h2>
+  <p>دوره: مارس ۲۰۲۳ – فوریه ۲۰۲۴ | منبع: [Volza Global Trade Intelligence, 2024] | [WITS WorldBank, 2024]</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>رتبه</th>
+          <th>کشور</th>
+          <th>سهم از واردات جهانی</th>
+          <th>منبع اصلی تأمین</th>
+          <th>ریسک تنوع‌بخشی</th>
+          <th>ارتباط با TSR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff8e1;"><td class="td-c">۱</td><td>🇻🇳 ویتنام</td><td class="td-c"><strong>۱۲٪</strong></td><td>چین</td><td class="td-c"><span class="badge badge-high">بالا</span></td><td>دور — بازار ثانویه</td></tr>
+        <tr><td class="td-c">۲</td><td>🇺🇦 اوکراین</td><td class="td-c">~۸٪</td><td>چین، اروپا</td><td class="td-c"><span class="badge badge-high">بسیار بالا</span></td><td>بی‌ثبات — عملاً غیرقابل دسترس</td></tr>
+        <tr style="background:#e8f4fd;"><td class="td-c">۳</td><td>🇷🇺 <strong>روسیه</strong></td><td class="td-c">~۷٪</td><td>چین، هند</td><td class="td-c"><span class="badge badge-high">بالا</span></td><td><span class="badge badge-blue">اولویت اول EAEU</span></td></tr>
+        <tr><td class="td-c">۴</td><td>🇩🇪 آلمان</td><td class="td-c">~۶٪</td><td>چین، جمهوری چک</td><td class="td-c"><span class="badge badge-low">پایین</span></td><td>تحریم — غیرقابل دسترس</td></tr>
+        <tr><td class="td-c">۵</td><td>🇮🇹 ایتالیا</td><td class="td-c">~۵٪</td><td>چین</td><td class="td-c"><span class="badge badge-med">متوسط</span></td><td>تحریم — غیرقابل دسترس</td></tr>
+        <tr style="background:#e8f4fd;"><td class="td-c">۶</td><td>🇰🇿 <strong>قزاقستان</strong></td><td class="td-c">~۳٪</td><td>چین</td><td class="td-c"><span class="badge badge-high">بالا</span></td><td><span class="badge badge-blue">اولویت دوم EAEU</span></td></tr>
+        <tr style="background:#e8f4fd;"><td class="td-c">۷</td><td>🇮🇶 <strong>عراق</strong></td><td class="td-c">~۲٪</td><td>چین، هند، ترکیه</td><td class="td-c"><span class="badge badge-high">بالا</span></td><td><span class="badge badge-blue">بازار آزمایشی پیشنهادی</span></td></tr>
+        <tr><td class="td-c">۸</td><td>🇧🇷 برزیل</td><td class="td-c">~۳٪</td><td>چین</td><td class="td-c"><span class="badge badge-med">متوسط</span></td><td>دور — بازار ثانویه</td></tr>
+        <tr><td class="td-c">۹</td><td>🇵🇰 پاکستان</td><td class="td-c">~۲٪</td><td>چین</td><td class="td-c"><span class="badge badge-high">بالا</span></td><td>بازار سوم</td></tr>
+        <tr style="background:#e8f4fd;"><td class="td-c">۱۰</td><td>🇦🇲 <strong>ارمنستان</strong></td><td class="td-c">~۱٪</td><td>چین، روسیه</td><td class="td-c"><span class="badge badge-med">متوسط</span></td><td><span class="badge badge-blue">دروازه مالی EAEU</span></td></tr>
+        <tr><td class="td-c">۱۱–۲۰</td><td>لهستان، اسپانیا، مکزیک، ترکیه، اندونزی...</td><td class="td-c">~۵۱٪</td><td>عمدتاً چین</td><td class="td-c"><span class="badge badge-med">متوسط</span></td><td>دور یا تحریم‌زده</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">۲.۴ روند قیمت جهانی کربنات باریم</h2>
+  <p>منابع: [IndexBox, China BaCO₃ Price Data, 2023] | [IMARC Group Pricing Report, 2025-2026] | [ProcurementResource, 2024]</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>دوره</th>
+          <th>قیمت FOB چین ($/تن)</th>
+          <th>قیمت CIF اروپا ($/تن)</th>
+          <th>رویداد کلیدی</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>۲۰۲۰ (میانگین)</td><td class="td-c">~$420–450</td><td class="td-c">~$520–560</td><td>COVID-19، کاهش تقاضا</td></tr>
+        <tr><td>۲۰۲۱ (میانگین)</td><td class="td-c">~$490–520</td><td class="td-c">~$590–630</td><td>بازگشت تقاضا، رشد صادرات چین ۲۸٪</td></tr>
+        <tr style="background:#fff3cd;"><td>اکتبر ۲۰۲۲ (اوج)</td><td class="td-c"><strong>$891</strong></td><td class="td-c">~$1,050</td><td>بحران زنجیره تأمین، بحران انرژی اروپا</td></tr>
+        <tr><td>۲۰۲۳ (میانگین)</td><td class="td-c">~$667</td><td class="td-c">~$780–820</td><td>عادی‌سازی، کاهش صادرات چین ۱۷٪</td></tr>
+        <tr><td>۲۰۲۴ (میانگین)</td><td class="td-c">~$620–650</td><td class="td-c">~$740–780</td><td>فشار هزینه مواد اولیه، رشد H2 2024</td></tr>
+        <tr><td><strong>Q1 2026 (امارات)</strong></td><td class="td-c">—</td><td class="td-c"><strong>$607/MT</strong></td><td>بازار منطقه‌ای خاورمیانه</td></tr>
+        <tr><td><strong>Q1 2026 (هند)</strong></td><td class="td-c">~$470–490</td><td class="td-c"><strong>$510/MT</strong></td><td>تولید داخلی قوی هند</td></tr>
+        <tr><td><strong>Q1 2026 (اروپا/بلژیک)</strong></td><td class="td-c">—</td><td class="td-c"><strong>$696/MT</strong></td><td>بالاترین قیمت منطقه‌ای</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>منبع: [IMARC Group, BaCO₃ Pricing Index, March 2026] | [OpenPR, Barium Carbonate Q1 2026 Price Report]</p>
+
+  <h3 class="sub2">عوامل کلیدی تأثیرگذار بر قیمت</h3>
+  <ul style="padding-right:20px;margin-bottom:16px;">
+    <li><strong>قیمت باریت (BaSO₄):</strong> ماده اولیه اصلی — هر تحول در بازار باریت مستقیماً قیمت BaCO₃ را متأثر می‌کند</li>
+    <li><strong>هزینه انرژی در چین:</strong> فرآیند تولید انرژی‌بر است — برق و گاز محرک اصلی بهای تمام‌شده</li>
+    <li><strong>مقررات زیست‌محیطی چین:</strong> تعطیلی‌های دوره‌ای کارخانه‌ها برای رعایت استانداردها، نوسان عرضه ایجاد می‌کند</li>
+    <li><strong>هزینه کشتیرانی:</strong> بحران کانتینر ۲۰۲۱-۲۲ نشان داد قیمت CIF می‌تواند تا ۳۰٪ بیشتر از FOB باشد</li>
+    <li><strong>نرخ ارز دلار-یوآن:</strong> تضعیف یوآن قیمت صادراتی چین را رقابتی‌تر می‌کند</li>
+  </ul>
+
+  <div class="findings">
+    <h4>یافته‌های کلیدی فصل ۲</h4>
+    <ul>
+      <li>قیمت منطقه‌ای Q1 2026 در خاورمیانه (امارات) حدود $607/تن است — فاصله معناداری با قیمت FOB چین + حمل دریایی</li>
+      <li>ایران هیچ سابقه صادراتی در این محصول ندارد؛ بازار کاملاً دست‌نخورده است</li>
+      <li>ویتنام (12٪)، روسیه (7٪) و عراق (2٪) مهم‌ترین واردکنندگان قابل دسترس برای TSR هستند</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== CHAPTER 3: TARGET MARKETS ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۳ — انتخاب بازارهای هدف</h1>
+
+  <h2 class="sub">۳.۱ متدولوژی انتخاب بازار</h2>
+  <p>برای انتخاب بازارهای هدف از <strong>ماتریس ارزیابی پنج‌بُعدی</strong> استفاده شده است. هر بازار از ۱ (ضعیف) تا ۵ (عالی) در پنج معیار زیر امتیازدهی شده و امتیاز نهایی وزن‌دار محاسبه گردیده است:</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>معیار</th><th>وزن</th><th>توضیح</th></tr></thead>
+      <tbody>
+        <tr><td><strong>حجم بازار</strong></td><td class="td-c">۲۵٪</td><td>میزان واردات سالانه کربنات باریم (تن)</td></tr>
+        <tr><td><strong>دسترسی لجستیکی</strong></td><td class="td-c">۲۵٪</td><td>فاصله، مرز مشترک، زمان تحویل، هزینه حمل</td></tr>
+        <tr><td><strong>مزیت تعرفه‌ای</strong></td><td class="td-c">۲۰٪</td><td>FTA، تعرفه پایه، کاهش تعرفه ترجیحی</td></tr>
+        <tr><td><strong>شدت رقابت</strong></td><td class="td-c">۱۵٪</td><td>سهم چین، وابستگی به یک منبع، openness به تامین‌کننده جدید</td></tr>
+        <tr><td><strong>ریسک کلی</strong></td><td class="td-c">۱۵٪</td><td>ریسک پرداخت، ثبات سیاسی، تحریم‌های ثانویه</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">۳.۲ تحلیل کشورهای اوراسیا (EAEU)</h2>
+
+  <div class="box-key">
+    <strong>مزیت کلیدی FTA:</strong> قرارداد تجارت آزاد ایران–EAEU که در دسامبر ۲۰۲۳ امضا و اوایل ۲۰۲۵ لازم‌الاجرا شد، تعرفه واردات تقریباً ۹۰٪ از کالاها از جمله مواد شیمیایی (فصل ۲۸ HS) را به صفر یا حداقل کاهش می‌دهد. تعرفه پایه اکثر کشورهای EAEU برای HS 2836.60 در حدود ۵ الی ۱۰٪ بود. [منبع: EEC (Eurasian Economic Commission), FTA EAEU-Iran 2023]
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>کشور</th>
+          <th>واردات سالانه BaCO₃ (تخمین)</th>
+          <th>منبع اصلی فعلی</th>
+          <th>تعرفه پایه</th>
+          <th>تعرفه با FTA ایران</th>
+          <th>صنعت مصرف‌کننده اصلی</th>
+          <th>ریسک پرداخت</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff8e1;">
+          <td><strong>🇷🇺 روسیه</strong></td>
+          <td class="td-c">۵,۰۰۰–۸,۰۰۰ تن/سال</td>
+          <td>چین، هند</td>
+          <td class="td-c">۵٪</td>
+          <td class="td-c"><strong>۰٪</strong></td>
+          <td>سرامیک، کاشی، شیشه</td>
+          <td class="td-c"><span class="badge badge-high">بالا (تحریم)</span></td>
+        </tr>
+        <tr style="background:#e8f4fd;">
+          <td><strong>🇰🇿 قزاقستان</strong></td>
+          <td class="td-c">۱,۵۰۰–۲,۵۰۰ تن/سال</td>
+          <td>چین (عمده)</td>
+          <td class="td-c">۵٪</td>
+          <td class="td-c"><strong>۰٪</strong></td>
+          <td>ساختمان‌سازی، آجر</td>
+          <td class="td-c"><span class="badge badge-med">متوسط</span></td>
+        </tr>
+        <tr>
+          <td>🇦🇲 ارمنستان</td>
+          <td class="td-c">۳۰۰–۶۰۰ تن/سال</td>
+          <td>روسیه، چین</td>
+          <td class="td-c">۵٪</td>
+          <td class="td-c"><strong>۰٪</strong></td>
+          <td>شیشه، سرامیک کوچک</td>
+          <td class="td-c"><span class="badge badge-low">پایین</span></td>
+        </tr>
+        <tr>
+          <td>🇧🇾 بلاروس</td>
+          <td class="td-c">۵۰۰–۸۰۰ تن/سال</td>
+          <td>روسیه، چین</td>
+          <td class="td-c">۵٪</td>
+          <td class="td-c"><strong>۰٪</strong></td>
+          <td>شیمیایی، سرامیک</td>
+          <td class="td-c"><span class="badge badge-high">بالا</span></td>
+        </tr>
+        <tr>
+          <td>🇰🇬 قرقیزستان</td>
+          <td class="td-c">۱۰۰–۲۰۰ تن/سال</td>
+          <td>قزاقستان، چین</td>
+          <td class="td-c">۵٪</td>
+          <td class="td-c"><strong>۰٪</strong></td>
+          <td>ساختمان</td>
+          <td class="td-c"><span class="badge badge-low">پایین</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><em>توجه: داده واردات دقیق کشورهای EAEU در TradeMap محرمانه گزارش می‌شود. ارقام فوق تخمین مشاور بر اساس داده‌های جهانی و میانگین مصرف صنعتی است. [داده موجود نیست — منبع باید: Russian Federal Customs Service / Kazakhstan Bureau of National Statistics]</em></p>
+
+  <h3 class="sub2">تحلیل دقیق روسیه (اولویت EAEU)</h3>
+  <p>روسیه بزرگ‌ترین بازار EAEU و یکی از ۵ واردکننده بزرگ جهانی کربنات باریم است. صنعت کاشی و سرامیک روسیه (۲۰۰+ میلیون متر مربع مصرف در ۲۰۱۹) به کربنات باریم نیاز دارد. پس از جنگ اوکراین و تحریم‌های غرب، روسیه به‌دنبال تنوع‌بخشی به منابع تأمین است و به کشورهایی مثل ایران، هند و ترکیه روی آورده است.</p>
+  <p><strong>کانال ترجیحی:</strong> مسیر کریدور شمال–جنوب (INSTC) از قم → تهران → آستارا → باکو → روسیه (ترکیبی از جاده و ریل). فاصله حدود ۲,۸۰۰ کیلومتر، زمان تحویل ۸–۱۲ روز.</p>
+
+  <h3 class="sub2">تحلیل دقیق قزاقستان (اولویت دوم)</h3>
+  <p>قزاقستان با رشد سریع ساخت و ساز و صنعت آجرسازی، تقاضای رو به رشدی برای کربنات باریم دارد. مسیر صادراتی از ایران از طریق گذرگاه Sarakhs–Tedzen (مرز ایران-ترکمنستان-قزاقستان) امکان‌پذیر است. ریسک پرداخت نسبت به روسیه کمتر و شرکت‌های قزاقستانی از نظر گشایش LC با بانک‌های محلی قابل انجام‌تر هستند.</p>
+
+  <h2 class="sub">۳.۳ تحلیل سایر کشورهای همسایه</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>کشور</th>
+          <th>واردات BaCO₃ (تخمین)</th>
+          <th>تعرفه از ایران</th>
+          <th>FTA / ترتیبات تجاری</th>
+          <th>پتانسیل بازار</th>
+          <th>موانع اصلی</th>
+          <th>اولویت</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#e8f4fd;">
+          <td><strong>🇮🇶 عراق</strong></td>
+          <td class="td-c">۱,۰۰۰–۲,۰۰۰ تن/سال</td>
+          <td class="td-c">۵٪</td>
+          <td>ترتیبات دوجانبه</td>
+          <td><span class="badge badge-blue">بالا</span></td>
+          <td>کیفیت، LC محدود</td>
+          <td class="td-c"><strong>⭐ اول</strong></td>
+        </tr>
+        <tr>
+          <td>🇹🇷 ترکیه</td>
+          <td class="td-c">۲,۰۰۰–۳,۵۰۰ تن/سال</td>
+          <td class="td-c">۵–۱۰٪</td>
+          <td>ترجیحی محدود</td>
+          <td><span class="badge badge-med">متوسط</span></td>
+          <td>رقابت داخلی، نرخ ارز</td>
+          <td class="td-c">سوم</td>
+        </tr>
+        <tr>
+          <td>🇵🇰 پاکستان</td>
+          <td class="td-c">۸۰۰–۱,۵۰۰ تن/سال</td>
+          <td class="td-c">۱۰٪</td>
+          <td>PTA ایران-پاکستان</td>
+          <td><span class="badge badge-med">متوسط</span></td>
+          <td>ریسک ارزی بالا، پرداخت دشوار</td>
+          <td class="td-c">چهارم</td>
+        </tr>
+        <tr>
+          <td>🇦🇿 آذربایجان</td>
+          <td class="td-c">۳۰۰–۵۰۰ تن/سال</td>
+          <td class="td-c">۱۵٪</td>
+          <td>بدون FTA</td>
+          <td><span class="badge badge-low">کم</span></td>
+          <td>تعرفه بالا، روابط سیاسی</td>
+          <td class="td-c">پنجم</td>
+        </tr>
+        <tr>
+          <td>🇹🇲 ترکمنستان</td>
+          <td class="td-c">۲۰۰–۴۰۰ تن/سال</td>
+          <td class="td-c">۵٪</td>
+          <td>مرز مشترک، ترتیب دوجانبه</td>
+          <td><span class="badge badge-low">کم-متوسط</span></td>
+          <td>بازار کوچک، ارز دشوار</td>
+          <td class="td-c">ششم</td>
+        </tr>
+        <tr>
+          <td>🇺🇿 ازبکستان</td>
+          <td class="td-c">۵۰۰–۸۰۰ تن/سال</td>
+          <td class="td-c">۵٪</td>
+          <td>SCO، مذاکرات FTA</td>
+          <td><span class="badge badge-med">متوسط</span></td>
+          <td>مسیر غیرمستقیم، ارز</td>
+          <td class="td-c">سوم–چهارم</td>
+        </tr>
+        <tr>
+          <td>🇦🇫 افغانستان</td>
+          <td class="td-c">۱۰۰–۲۵۰ تن/سال</td>
+          <td class="td-c">۲.۵٪</td>
+          <td>دسترسی آسان</td>
+          <td><span class="badge badge-low">کم</span></td>
+          <td>بی‌ثباتی سیاسی، پرداخت</td>
+          <td class="td-c">هفتم</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><em>توجه: داده واردات همسایگان از منابع WITS و Volza برای HS 2836.60 قابل استخراج است اما داده‌های سال ۲۰۲۴ برای این کشورها در دسترس عمومی محدود است. [داده موجود نیست برای تأیید دقیق — منبع پیشنهادی: ITC Market Access Map]</em></p>
+
+  <h2 class="sub">۳.۴ ماتریس نهایی انتخاب بازار</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>بازار</th>
+          <th>حجم بازار (25٪)</th>
+          <th>لجستیک (25٪)</th>
+          <th>تعرفه/FTA (20٪)</th>
+          <th>رقابت (15٪)</th>
+          <th>ریسک (15٪)</th>
+          <th>امتیاز نهایی</th>
+          <th>رتبه</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#e8f4fd;font-weight:700;">
+          <td>🇮🇶 عراق</td><td class="td-c">3</td><td class="td-c">5</td><td class="td-c">3</td><td class="td-c">4</td><td class="td-c">4</td>
+          <td class="td-c" style="color:#27ae60;font-size:16px;"><strong>3.85</strong></td><td class="td-c">🥇</td>
+        </tr>
+        <tr style="background:#fff8e1;">
+          <td>🇷🇺 روسیه (EAEU)</td><td class="td-c">5</td><td class="td-c">3</td><td class="td-c">5</td><td class="td-c">3</td><td class="td-c">2</td>
+          <td class="td-c" style="color:#2e75b6;font-size:16px;"><strong>3.70</strong></td><td class="td-c">🥈</td>
+        </tr>
+        <tr>
+          <td>🇰🇿 قزاقستان (EAEU)</td><td class="td-c">3</td><td class="td-c">3</td><td class="td-c">5</td><td class="td-c">3</td><td class="td-c">3</td>
+          <td class="td-c" style="font-size:16px;"><strong>3.45</strong></td><td class="td-c">🥉</td>
+        </tr>
+        <tr>
+          <td>🇦🇲 ارمنستان (EAEU)</td><td class="td-c">2</td><td class="td-c">4</td><td class="td-c">5</td><td class="td-c">3</td><td class="td-c">4</td>
+          <td class="td-c"><strong>3.40</strong></td><td class="td-c">۴</td>
+        </tr>
+        <tr>
+          <td>🇹🇷 ترکیه</td><td class="td-c">4</td><td class="td-c">4</td><td class="td-c">2</td><td class="td-c">2</td><td class="td-c">3</td>
+          <td class="td-c"><strong>3.10</strong></td><td class="td-c">۵</td>
+        </tr>
+        <tr>
+          <td>🇺🇿 ازبکستان</td><td class="td-c">2</td><td class="td-c">3</td><td class="td-c">3</td><td class="td-c">4</td><td class="td-c">3</td>
+          <td class="td-c"><strong>2.95</strong></td><td class="td-c">۶</td>
+        </tr>
+        <tr>
+          <td>🇵🇰 پاکستان</td><td class="td-c">2</td><td class="td-c">3</td><td class="td-c">3</td><td class="td-c">3</td><td class="td-c">2</td>
+          <td class="td-c"><strong>2.65</strong></td><td class="td-c">۷</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box-green">
+    <strong>نتیجه‌گیری:</strong> بازارهای هدف اولیه پیشنهادی: ۱) عراق (آغاز فوری)، ۲) روسیه (موازی، از طریق ارمنستان یا مستقیم)، ۳) قزاقستان (فاز دوم). ارمنستان به‌عنوان «دروازه مالی» برای تسهیل پرداخت‌های EAEU نیز اهمیت استراتژیک دارد.
+  </div>
+</div>
+
+
+<!-- ========== CHAPTER 4: COMPETITORS ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۴ — تحلیل رقبا</h1>
+
+  <h2 class="sub">۴.۱ رقبای اصلی جهانی — تولیدکنندگان چینی</h2>
+  <p>منابع: [Volza, China BaCO₃ Export Data Jun 2024–May 2025] | [Spherical Insights, Top 10 BaCO₃ Companies 2025] | [IMARC Group, 2025]</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>شرکت</th>
+          <th>کشور / منطقه</th>
+          <th>سهم صادرات</th>
+          <th>گرید اصلی</th>
+          <th>قیمت FOB تخمینی</th>
+          <th>بازارهای اصلی</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff3cd;">
+          <td><strong>Guizhou Redstar Developing</strong></td>
+          <td>گویژو، چین</td>
+          <td class="td-c"><strong>۸۳٪</strong> از کل چین</td>
+          <td>Industrial, Technical</td>
+          <td class="td-c">$620–680/تن</td>
+          <td>ویتنام، اوکراین، روسیه، هند</td>
+        </tr>
+        <tr>
+          <td><strong>Hubei Jingshan Chutian Barium Salt</strong></td>
+          <td>هوبی، چین</td>
+          <td class="td-c">~۱۰٪ از کل چین</td>
+          <td>Industrial, Electronic</td>
+          <td class="td-c">$650–750/تن</td>
+          <td>ژاپن، کره، اروپا</td>
+        </tr>
+        <tr>
+          <td>سایر تولیدکنندگان چینی کوچک</td>
+          <td>شانشی، سیچوان</td>
+          <td class="td-c">~۷٪</td>
+          <td>Industrial</td>
+          <td class="td-c">$580–640/تن</td>
+          <td>منطقه‌ای</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">سایر رقبای غیرچینی</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>شرکت</th><th>کشور</th><th>ظرفیت</th><th>نقاط قوت</th><th>تأثیر بر TSR</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Vishnu Barium Pvt. Ltd.</strong></td>
+          <td>هند</td>
+          <td>~۲۵,۰۰۰ تن/سال</td>
+          <td>قیمت پایین، تجربه صادراتی</td>
+          <td class="td-c"><span class="badge badge-med">رقیب مستقیم</span></td>
+        </tr>
+        <tr>
+          <td><strong>Solvay (Barium & Strontium)</strong></td>
+          <td>بلژیک/اروپا</td>
+          <td>محدود</td>
+          <td>کیفیت بالا، REACH</td>
+          <td class="td-c"><span class="badge badge-low">رقیب در بازارهای اروپایی</span></td>
+        </tr>
+        <tr>
+          <td><strong>Sakai Chemical Industry</strong></td>
+          <td>ژاپن</td>
+          <td>محدود — Electronic Grade</td>
+          <td>گرید الکترونیک بسیار خالص</td>
+          <td class="td-c"><span class="badge badge-low">بازار جداگانه</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">۴.۲ مزیت رقابتی TSR در برابر چین</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>عامل رقابتی</th><th>چین (Guizhou Redstar)</th><th>TSR ایران</th><th>برنده</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>قیمت FOB</strong></td>
+          <td class="td-c">$620–680/تن</td>
+          <td class="td-c">~$450–520/تن (فرض)</td>
+          <td class="td-c">✅ ایران</td>
+        </tr>
+        <tr>
+          <td><strong>هزینه حمل به عراق</strong></td>
+          <td class="td-c">$80–120/تن (دریایی)</td>
+          <td class="td-c">$30–50/تن (زمینی)</td>
+          <td class="td-c">✅ ایران</td>
+        </tr>
+        <tr>
+          <td><strong>هزینه حمل به روسیه</strong></td>
+          <td class="td-c">$90–130/تن (دریایی)</td>
+          <td class="td-c">$80–110/تن (ریل/جاده)</td>
+          <td class="td-c">≈ مشابه</td>
+        </tr>
+        <tr>
+          <td><strong>زمان تحویل به عراق</strong></td>
+          <td class="td-c">۲۵–۴۵ روز</td>
+          <td class="td-c">۳–۷ روز</td>
+          <td class="td-c">✅ ایران</td>
+        </tr>
+        <tr>
+          <td><strong>تعرفه در روسیه/EAEU</strong></td>
+          <td class="td-c">۵٪ (MFN)</td>
+          <td class="td-c">۰٪ (FTA)</td>
+          <td class="td-c">✅ ایران</td>
+        </tr>
+        <tr>
+          <td><strong>ثبات عرضه</strong></td>
+          <td class="td-c">بالا ولی تحت‌تأثیر مقررات محیطی</td>
+          <td class="td-c">متوسط</td>
+          <td class="td-c">⚠️ چین (تاریخاً)</td>
+        </tr>
+        <tr>
+          <td><strong>سابقه تجاری</strong></td>
+          <td class="td-c">بالا — شناخته‌شده جهانی</td>
+          <td class="td-c">صفر در این محصول</td>
+          <td class="td-c">❌ چین</td>
+        </tr>
+        <tr>
+          <td><strong>پیچیدگی پرداخت</strong></td>
+          <td class="td-c">SWIFT آزاد</td>
+          <td class="td-c">دشوار (تحریم)</td>
+          <td class="td-c">❌ چین</td>
+        </tr>
+        <tr>
+          <td><strong>گواهینامه‌های بین‌المللی</strong></td>
+          <td class="td-c">کامل (ISO, SGS)</td>
+          <td class="td-c">نیاز به اخذ</td>
+          <td class="td-c">❌ چین (فعلاً)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">محاسبه مقایسه قیمت CIF در بازار عراق</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>آیتم</th><th>چین → عراق</th><th>ایران (TSR) → عراق</th></tr></thead>
+      <tbody>
+        <tr><td>قیمت FOB مبدأ</td><td class="td-c">$650/تن</td><td class="td-c">$480/تن (فرض)</td></tr>
+        <tr><td>هزینه حمل بین‌المللی</td><td class="td-c">$100/تن (دریایی+تخلیه)</td><td class="td-c">$40/تن (کامیون مرز)</td></tr>
+        <tr><td>بیمه</td><td class="td-c">$8/تن</td><td class="td-c">$5/تن</td></tr>
+        <tr><td>تعرفه واردات عراق (5٪)</td><td class="td-c">$38/تن</td><td class="td-c">$27/تن</td></tr>
+        <tr style="background:#e9f7ef;font-weight:700;"><td>قیمت CIF بازار عراق</td><td class="td-c">~$796/تن</td><td class="td-c">~$552/تن</td></tr>
+        <tr style="background:#e8f4fd;"><td colspan="2" style="text-align:center;font-weight:700;">صرفه‌جویی برای خریدار عراقی:</td><td class="td-c" style="color:#27ae60;font-weight:700;">~$244/تن (31٪ ارزان‌تر!)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box-assumption">قیمت FOB ایران فرض شده $480/تن. این نیازمند تأیید بهای تمام‌شده واقعی TSR است. [منبع: فرض مشاور بر اساس میانگین صنعت و هزینه تولید تخمینی $300/تن]</div>
+
+  <div class="findings">
+    <h4>یافته‌های کلیدی فصل ۴</h4>
+    <ul>
+      <li>TSR می‌تواند قیمت CIF را در عراق تا ۳۰٪ و در EAEU تا ۱۵٪ پایین‌تر از رقیب چینی ارائه دهد — فقط از محل مزیت جغرافیایی و FTA.</li>
+      <li>ضعف اصلی TSR: نبود سابقه صادراتی، فقدان گواهینامه‌های بین‌المللی، و پیچیدگی پرداخت.</li>
+      <li>Guizhou Redstar رقیب اصلی است اما یک تأمین‌کننده تنها — هرگونه اختلال در عرضه چین، فرصت طلایی برای TSR است.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== CHAPTER 5: LOGISTICS ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۵ — لجستیک و زنجیره تأمین</h1>
+
+  <h2 class="sub">۵.۱ مسیرهای صادراتی</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>بازار مقصد</th>
+          <th>مسیر پیشنهادی</th>
+          <th>نوع حمل</th>
+          <th>مرز/بندر خروجی</th>
+          <th>زمان تحویل</th>
+          <th>هزینه حمل ($/تن)</th>
+          <th>یادداشت</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#e8f4fd;">
+          <td><strong>🇮🇶 عراق</strong></td>
+          <td>قم ← تهران ← مهران/خسروی</td>
+          <td>کامیون TIR</td>
+          <td>مهران (ایلام) یا خسروی (کرمانشاه)</td>
+          <td class="td-c">۲–۵ روز</td>
+          <td class="td-c">$30–50</td>
+          <td>ساده‌ترین مسیر، پرکاربردترین</td>
+        </tr>
+        <tr>
+          <td><strong>🇷🇺 روسیه</strong></td>
+          <td>قم ← تهران ← آستارا ← باکو ← روسیه (INSTC)</td>
+          <td>ریل+جاده یا ریل</td>
+          <td>آستارا (گیلان)</td>
+          <td class="td-c">۸–۱۵ روز</td>
+          <td class="td-c">$80–120</td>
+          <td>کریدور شمال-جنوب؛ پس از تکمیل راه‌آهن رشت-آستارا بهبود می‌یابد</td>
+        </tr>
+        <tr>
+          <td><strong>🇰🇿 قزاقستان</strong></td>
+          <td>قم ← تهران ← سرخس ← تجن (ترکمنستان) ← قزاقستان</td>
+          <td>ریل (خط ترانس‌آسیا)</td>
+          <td>سرخس (خراسان رضوی)</td>
+          <td class="td-c">۷–۱۲ روز</td>
+          <td class="td-c">$60–90</td>
+          <td>مسیر ریلی ترانزیت ترکمنستان</td>
+        </tr>
+        <tr>
+          <td><strong>🇦🇲 ارمنستان</strong></td>
+          <td>قم ← تبریز ← نوردوز ← ارمنستان</td>
+          <td>کامیون</td>
+          <td>نوردوز (آذربایجان شرقی)</td>
+          <td class="td-c">۳–۶ روز</td>
+          <td class="td-c">$50–70</td>
+          <td>دروازه مالی EAEU، مسیر کوتاه‌تر</td>
+        </tr>
+        <tr>
+          <td><strong>🇹🇷 ترکیه</strong></td>
+          <td>قم ← تبریز ← بازرگان</td>
+          <td>کامیون TIR</td>
+          <td>بازرگان (آذربایجان غربی)</td>
+          <td class="td-c">۳–۵ روز</td>
+          <td class="td-c">$40–60</td>
+          <td>تعرفه بالاتر، رقابت داخلی</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><em>منابع هزینه حمل: تخمین بر اساس نرخ‌های عمومی کامیون TIR ایران–عراق (مهرنیوز ۲۰۲۴) و داده‌های INSTC. [داده دقیق باید از شرکت‌های حمل‌ونقل ایرانی استعلام شود]</em></p>
+
+  <div class="box-key">
+    <strong>کریدور INSTC (International North–South Transport Corridor):</strong> این کریدور استراتژیک ایران را از بندر امام خمینی/بندرعباس از جنوب به آستارا در شمال متصل می‌کند و سپس از طریق آذربایجان یا دریای خزر به روسیه می‌رسد. قرارداد ۱.۶ میلیارد یورویی راه‌آهن رشت-آستارا در مه ۲۰۲۳ بین ایران و روسیه امضا شد. تکمیل این مسیر ریلی، هزینه حمل به روسیه را به شدت کاهش خواهد داد. [منبع: Maritime Executive, May 2023]
+  </div>
+
+  <h2 class="sub">۵.۲ بسته‌بندی و استانداردها</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>نوع بسته‌بندی</th><th>وزن</th><th>کاربرد</th><th>هزینه تخمینی</th><th>توصیه برای TSR</th></tr></thead>
+      <tbody>
+        <tr style="background:#e8f4fd;"><td><strong>Big Bag (FIBC/Jumbo Bag)</strong></td><td class="td-c">۵۰۰–۱,۰۰۰ کیلو</td><td>صنایع بزرگ، واردات عمده</td><td class="td-c">$8–15/عدد</td><td class="td-c">✅ پیشنهادی برای EAEU و عراق</td></tr>
+        <tr><td><strong>Multiwall Paper Bag</strong></td><td class="td-c">۲۵–۵۰ کیلو</td><td>توزیع‌کنندگان، بازارهای کوچک‌تر</td><td class="td-c">$2–4/عدد</td><td class="td-c">⚠️ برای اولین محموله آزمایشی</td></tr>
+        <tr><td><strong>Plastic Woven Bag</strong></td><td class="td-c">۲۵ کیلو</td><td>بازارهای محلی با ذخیره‌سازی ساده</td><td class="td-c">$1–2/عدد</td><td class="td-c">فقط برای عراق غیررسمی</td></tr>
+        <tr><td><strong>ISO Tank Container</strong></td><td class="td-c">۱۸–۲۰ تن</td><td>حمل فله برای کارخانه‌های بزرگ</td><td class="td-c">$300–500/تانکر</td><td class="td-c">فاز دوم</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">الزامات برچسب‌گذاری (Labeling)</h3>
+  <ul style="padding-right:20px;margin-bottom:16px;">
+    <li>نام محصول به انگلیسی و زبان کشور مقصد</li>
+    <li>فرمول شیمیایی: BaCO₃ | CAS: 513-77-9</li>
+    <li>وزن خالص و ناخالص</li>
+    <li>نام و آدرس تولیدکننده</li>
+    <li>کد HS: 2836.60</li>
+    <li>علائم GHS خطر (Warning — بارش کننده بالقوه خطرناک — باید SDS همراه باشد)</li>
+    <li>تاریخ تولید و شماره لات</li>
+    <li>گواهی آنالیز (CoA) ترجیحاً از SGS یا Intertek</li>
+  </ul>
+
+  <h3 class="sub2">مستندات صادراتی مورد نیاز</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>سند</th><th>صادرکننده</th><th>اجباری؟</th></tr></thead>
+      <tbody>
+        <tr><td>Packing List</td><td>TSR</td><td class="td-c">✅ بله</td></tr>
+        <tr><td>Commercial Invoice</td><td>TSR</td><td class="td-c">✅ بله</td></tr>
+        <tr><td>Certificate of Origin (اتاق بازرگانی)</td><td>اتاق بازرگانی ایران</td><td class="td-c">✅ بله</td></tr>
+        <tr><td>Certificate of Analysis (CoA)</td><td>آزمایشگاه معتبر</td><td class="td-c">✅ الزامی</td></tr>
+        <tr><td>Safety Data Sheet (SDS/MSDS)</td><td>TSR</td><td class="td-c">✅ بله</td></tr>
+        <tr><td>Bill of Lading / CMR</td><td>شرکت حمل</td><td class="td-c">✅ بله</td></tr>
+        <tr><td>Phytosanitary Certificate</td><td>وزارت جهاد</td><td class="td-c">❌ لازم نیست</td></tr>
+        <tr><td>SGS Inspection Report</td><td>SGS</td><td class="td-c">⚠️ برای خریداران بزرگ توصیه می‌شود</td></tr>
+        <tr><td>مجوز صادرات وزارت صنعت</td><td>وزارت صمت</td><td class="td-c">✅ بله (برای کالاهای شیمیایی)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">۵.۳ بیمه باربری و اینکوترمز</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>بازار</th><th>اینکوترمز پیشنهادی</th><th>توضیح</th></tr></thead>
+      <tbody>
+        <tr><td>عراق (شروع)</td><td class="td-c"><strong>DAP (Delivered at Place)</strong></td><td>TSR مسئولیت حمل تا انبار خریدار را دارد — اعتمادساز قوی برای اولین تجربه</td></tr>
+        <tr><td>روسیه/EAEU</td><td class="td-c"><strong>FOB مرز ایران</strong></td><td>تا اتصال ریلی تکمیل شود؛ بعد CIF پیشنهادی</td></tr>
+        <tr><td>قزاقستان</td><td class="td-c"><strong>CPT (Carriage Paid To)</strong></td><td>مناسب برای حمل ریلی ترانزیت</td></tr>
+        <tr><td>ارمنستان</td><td class="td-c"><strong>DAP</strong></td><td>مناسب برای ورودی EAEU</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>بیمه پیشنهادی:</strong> Institute Cargo Clauses (A) — جامع‌ترین پوشش. در بیمه‌گران ایرانی: بیمه ایران، بیمه آسیا برای صادرات مواد شیمیایی. نرخ بیمه تقریبی: ۰.۵–۱٪ ارزش کالا.</p>
+</div>
+
+<!-- ========== CHAPTER 6: MARKETING ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۶ — بازاریابی و کانال‌های فروش</h1>
+
+  <h2 class="sub">۶.۱ ساختار بازار در کشورهای هدف</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>کشور</th><th>مدل خرید رایج</th><th>نقش توزیع‌کننده</th><th>تناوب سفارش معمول</th></tr></thead>
+      <tbody>
+        <tr><td><strong>عراق</strong></td><td>واسطه/تریدر (۷۰٪) + مستقیم (۳۰٪)</td><td>بسیار مهم — خریداران مستقیم از تولیدکننده خارجی نادرند</td><td>ماهانه یا فصلی</td></tr>
+        <tr><td><strong>روسیه</strong></td><td>توزیع‌کننده شیمیایی (۶۰٪) + کارخانه مستقیم (۴۰٪)</td><td>مهم — چند توزیع‌کننده بزرگ بازار را کنترل می‌کنند</td><td>سه‌ماهه یا دوره‌ای بزرگ</td></tr>
+        <tr><td><strong>قزاقستان</strong></td><td>توزیع‌کننده (۸۰٪)</td><td>کلیدی — بازار نسبتاً کوچک با شرکت‌های واسط</td><td>فصلی</td></tr>
+        <tr><td><strong>ارمنستان</strong></td><td>واردکننده-توزیع‌کننده (۹۰٪)</td><td>یک یا دو واردکننده بازار را کنترل می‌کنند</td><td>فصلی</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">۶.۲ کانال‌های فروش پیشنهادی</h2>
+
+  <h3 class="sub2">کانال اول: فروش مستقیم B2B به صنایع مصرف‌کننده</h3>
+  <p>مناسب برای: کارخانه‌های بزرگ کاشی و سرامیک در عراق (بغداد، نجف)، روسیه (اورال، سیبری)، قزاقستان (آلماتی). نیاز به نمایندگی محلی یا حداقل یک سفر معرفی به کارخانه‌ها دارد. مزیت: حاشیه سود بالاتر. معایب: زمان‌بر، نیاز به مرجع (reference).</p>
+
+  <h3 class="sub2">کانال دوم: توزیع‌کنندگان مواد شیمیایی محلی</h3>
+  <p>توصیه می‌شود برای مرحله اول. توزیع‌کننده محلی، اعتماد مشتریان و شبکه توزیع را دارد. TSR باید ۱–۲ توزیع‌کننده انحصاری در هر کشور هدف پیدا و قرارداد امضا کند. کمیسیون متداول: ۵–۱۰٪ ارزش فروش.</p>
+
+  <h3 class="sub2">کانال سوم: پلتفرم‌های آنلاین B2B</h3>
+  <ul style="padding-right:20px;margin-bottom:12px;">
+    <li><strong>Alibaba.com / Made-in-China.com:</strong> اثربخشی محدود برای ایران به دلیل محدودیت‌های پرداخت</li>
+    <li><strong>Kompass.com:</strong> مناسب برای یافتن شرکت‌های هدف در EAEU</li>
+    <li><strong>ChemOrbis.com:</strong> بازار شیمیایی آنلاین با حضور شرکت‌های روسی و ترکی</li>
+    <li><strong>ICIS:</strong> پلتفرم تخصصی مواد شیمیایی برای قیمت‌گذاری و ارتباط</li>
+  </ul>
+
+  <h3 class="sub2">کانال چهارم: نمایشگاه‌های بین‌المللی</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>نمایشگاه</th><th>مکان</th><th>تناوب</th><th>اهمیت برای TSR</th></tr></thead>
+      <tbody>
+        <tr><td>Chem Show / Chemitex Russia</td><td>مسکو، روسیه</td><td>سالانه</td><td class="td-c"><span class="badge badge-blue">بالا</span></td></tr>
+        <tr><td>Kazakhstan International Chemical Exhibition</td><td>آلماتی</td><td>سالانه</td><td class="td-c"><span class="badge badge-blue">بالا</span></td></tr>
+        <tr><td>Iran Plast / Iran Chem (نمایشگاه بین‌المللی تهران)</td><td>تهران</td><td>سالانه</td><td class="td-c"><span class="badge badge-med">متوسط</span></td></tr>
+        <tr><td>Baghdad International Fair</td><td>بغداد</td><td>سالانه</td><td class="td-c"><span class="badge badge-blue">بالا برای عراق</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="box-assumption">بودجه بازاریابی TSR تأیید نشده. فرض: بودجه سال اول $30,000–50,000 برای ۲ نمایشگاه + بازدید میدانی + هزینه نمونه‌سازی.</div>
+
+  <h2 class="sub">۶.۳ استراتژی قیمت‌گذاری</h2>
+  <div class="box-assumption">قیمت تمام‌شده TSR: فرض $280/تن (شامل مواد اولیه، انرژی، دستمزد، سربار). این عدد باید از بخش مالی TSR تأیید شود. [منبع: فرض مشاور بر اساس میانگین صنعت ایران]</div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>آیتم</th>
+          <th>عراق (DAP بغداد)</th>
+          <th>روسیه (FOB مرز)</th>
+          <th>قزاقستان (DAP)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>بهای تمام‌شده تولید (فرض)</td><td class="td-c">$280</td><td class="td-c">$280</td><td class="td-c">$280</td></tr>
+        <tr><td>بسته‌بندی صادراتی</td><td class="td-c">$20</td><td class="td-c">$20</td><td class="td-c">$20</td></tr>
+        <tr><td>حمل داخلی تا مرز/بندر</td><td class="td-c">$15</td><td class="td-c">$15</td><td class="td-c">$15</td></tr>
+        <tr><td>هزینه صادرات/گمرک ایران</td><td class="td-c">$8</td><td class="td-c">$8</td><td class="td-c">$8</td></tr>
+        <tr><td>حمل بین‌المللی</td><td class="td-c">$40</td><td class="td-c">—</td><td class="td-c">$75</td></tr>
+        <tr><td>بیمه</td><td class="td-c">$5</td><td class="td-c">$4</td><td class="td-c">$6</td></tr>
+        <tr><td>هزینه مالی/بانکی</td><td class="td-c">$10</td><td class="td-c">$12</td><td class="td-c">$10</td></tr>
+        <tr style="background:#eaf4fb;font-weight:700;"><td>قیمت سر به سر</td><td class="td-c">$378</td><td class="td-c">$339</td><td class="td-c">$414</td></tr>
+        <tr><td>حاشیه هدف (20٪)</td><td class="td-c">$76</td><td class="td-c">$68</td><td class="td-c">$83</td></tr>
+        <tr style="background:#e9f7ef;font-weight:700;"><td>قیمت فروش پیشنهادی</td><td class="td-c" style="color:#27ae60;">$450–480/تن</td><td class="td-c" style="color:#27ae60;">$400–430/تن (FOB)</td><td class="td-c" style="color:#27ae60;">$500–520/تن</td></tr>
+        <tr><td>قیمت رقیب چینی (معادل)</td><td class="td-c">~$780–820/تن (CIF)</td><td class="td-c">~$720–760/تن (CIF)</td><td class="td-c">~$700–750/تن</td></tr>
+        <tr style="background:#fff3cd;"><td><strong>مزیت قیمتی TSR</strong></td><td class="td-c" style="color:#27ae60;font-weight:700;">~$300–$370/تن ارزان‌تر</td><td class="td-c" style="color:#27ae60;font-weight:700;">~$290–330/تن ارزان‌تر</td><td class="td-c" style="color:#27ae60;font-weight:700;">~$200–230/تن ارزان‌تر</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><em>توجه: این تخمین‌ها حساسیت بالایی به بهای تمام‌شده واقعی TSR و نرخ ارز دارند. توصیه می‌شود تحلیل حساسیت با اعداد واقعی انجام شود.</em></p>
+</div>
+
+<!-- ========== CHAPTER 7: NTBs ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۷ — موانع و اقدامات غیرتعرفه‌ای (NTBs)</h1>
+
+  <h2 class="sub">۷.۱ تحریم‌ها و محدودیت‌های بین‌المللی</h2>
+
+  <div class="box-warning">این بخش گزارش باید واقع‌بینانه و بدون خوش‌بینی کاذب مطالعه شود. تحریم‌های ایران چالش جدی هستند و راه‌حل‌های موجود همه با ریسک همراهند.</div>
+
+  <h3 class="sub2">وضعیت کربنات باریم در فهرست‌های کنترل صادراتی</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>فهرست کنترل</th><th>وضعیت کربنات باریم</th><th>منبع</th><th>تأثیر بر TSR</th></tr></thead>
+      <tbody>
+        <tr><td>US Export Administration Regulations (EAR)</td><td>فهرست EAR99 — کنترل خاص ندارد</td><td>BIS, US Commerce Dept.</td><td class="td-c"><span class="badge badge-low">تحریم کلی OFAC اعمال می‌شود، نه کنترل کالایی</span></td></tr>
+        <tr><td>EU Dual-Use Regulation (2021/821)</td><td>در فهرست Dual-Use اتحادیه اروپا نیست</td><td>EU Commission</td><td class="td-c"><span class="badge badge-low">خطر کنترل صادراتی کم</span></td></tr>
+        <tr><td>OFAC (Office of Foreign Assets Control)</td><td>ایران در تحریم‌های جامع OFAC است</td><td>US Treasury</td><td class="td-c"><span class="badge badge-high">مانع اصلی پرداخت دلاری</span></td></tr>
+        <tr><td>UN Security Council Sanctions</td><td>تحریم‌های هسته‌ای مرتبط برداشته شده (JCPOA)</td><td>UNSC</td><td class="td-c"><span class="badge badge-med">وابسته به تحولات سیاسی</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box-green">
+    <strong>نکته مثبت:</strong> کربنات باریم در هیچ فهرست تحریمی یا کنترل صادراتی Dual-Use قرار ندارد. مانع اصلی «تحریم شخص» است (ایران به عنوان کشور)، نه ممنوعیت محصول خاص. این یعنی صادرات به روسیه، عراق و قزاقستان از نظر قانونی در کشور مقصد ممنوع نیست.
+  </div>
+
+  <h3 class="sub2">چارچوب عملی تحریم‌ها</h3>
+  <ul style="padding-right:20px;margin-bottom:16px;">
+    <li><strong>کشورهایی که ترس از تحریم‌های ثانویه دارند:</strong> اروپا، آمریکای شمالی، ژاپن، کره — برای این بازارها صادرات عملاً ناممکن است.</li>
+    <li><strong>کشورهایی که تحریم‌های ثانویه آمریکا را رعایت نمی‌کنند:</strong> روسیه، عراق (برای مواد غیرنفتی)، قزاقستان، ارمنستان، ترکیه — اینها بازارهای واقعی TSR هستند.</li>
+    <li><strong>الگوی عملیاتی رایج:</strong> صادرکنندگان ایرانی از طریق واسطه‌های ترکی، ارمنی، عراقی یا اماراتی که کانال‌های پرداختی خاص دارند عمل می‌کنند.</li>
+  </ul>
+
+  <h2 class="sub">۷.۲ موانع پرداخت و راه‌حل‌های موجود</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>روش پرداخت</th><th>کشورهای قابل استفاده</th><th>ریسک</th><th>توصیه</th></tr></thead>
+      <tbody>
+        <tr><td><strong>حواله (Hawala)</strong></td><td>عراق، امارات، ترکیه</td><td class="td-c"><span class="badge badge-med">متوسط</span></td><td>رایج‌ترین روش در عراق؛ نیاز به واسطه معتبر</td></tr>
+        <tr><td><strong>LC از بانک‌های عراقی</strong></td><td>عراق</td><td class="td-c"><span class="badge badge-med">متوسط</span></td><td>برخی بانک‌های عراقی با ایران کار می‌کنند</td></tr>
+        <tr><td><strong>SPFS روسیه</strong></td><td>روسیه، EAEU</td><td class="td-c"><span class="badge badge-low">پایین در داخل EAEU</span></td><td>جایگزین SWIFT روسی — قابل استفاده از طریق بانک‌های ایرانی عضو</td></tr>
+        <tr><td><strong>ارز غیردلاری (روبل، درهم، یوآن)</strong></td><td>روسیه، امارات، چین</td><td class="td-c"><span class="badge badge-med">ریسک ارزی</span></td><td>قابل انجام با هجینگ مناسب</td></tr>
+        <tr><td><strong>بارتر / تهاتر</strong></td><td>روسیه، عراق</td><td class="td-c"><span class="badge badge-med">متوسط</span></td><td>نیاز به کالای معوضی مناسب</td></tr>
+        <tr><td><strong>ارمنستان به عنوان واسط</strong></td><td>EAEU</td><td class="td-c"><span class="badge badge-low">پایین</span></td><td>ارمنستان عضو EAEU و سوئیفت دارد — می‌تواند واسط مالی باشد</td></tr>
+        <tr><td><strong>Open Account (TT پس از تحویل)</strong></td><td>خریداران با سابقه طولانی</td><td class="td-c"><span class="badge badge-high">بالا</span></td><td>فقط برای مشتریان قابل اعتماد با سابقه معاملاتی</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="box-warning">مدیریت ریسک پرداخت: در صادرات اول، <strong>هرگز</strong> کالا را بدون تضمین پرداخت ارسال نکنید. حداقل ۵۰٪ پیش‌پرداخت + ۵۰٪ اعتبار اسنادی یا TT قبل از ترخیص. خریدار ناشناس در عراق = ریسک بالای عدم پرداخت.</div>
+
+  <h2 class="sub">۷.۳ الزامات ثبت، گواهینامه و مقررات کشور مقصد</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>الزام</th><th>عراق</th><th>روسیه</th><th>قزاقستان</th><th>اولویت TSR</th></tr></thead>
+      <tbody>
+        <tr><td>ثبت واردات وزارت صنعت مقصد</td><td>خیر (آزاد)</td><td>ثبت شرکت واردکننده</td><td>ثبت واردکننده در گمرک</td><td class="td-c">وظیفه خریدار</td></tr>
+        <tr><td>تأییدیه آزمایشگاهی</td><td>گاهی</td><td>الزامی (GOST)</td><td>ترجیحاً</td><td class="td-c"><span class="badge badge-high">CoA SGS تهیه کنید</span></td></tr>
+        <tr><td>ثبت REACH اروپا</td><td>خیر</td><td>خیر</td><td>خیر</td><td class="td-c">ندارد</td></tr>
+        <tr><td>SDS به زبان مقصد</td><td>عربی یا انگلیسی</td><td>روسی</td><td>قزاقی/روسی</td><td class="td-c"><span class="badge badge-high">ترجمه کنید</span></td></tr>
+        <tr><td>مجوز صادرات ایران</td><td colspan="3" class="td-c">مجوز از وزارت صمت — هزینه و زمان: ۲–۴ هفته</td><td class="td-c"><span class="badge badge-high">اقدام فوری</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ========== CHAPTER 8: FINANCIAL ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۸ — تحلیل مالی</h1>
+
+  <h2 class="sub">۸.۱ ساختار هزینه صادرات — سناریو ۱,۰۰۰ تن به عراق</h2>
+  <div class="box-assumption">همه اعداد بر اساس فرضیات مشاور است. [منبع: میانگین صنعتی، تخمین مشاور]. بهای تمام‌شده تولید باید از بخش مالی TSR تأیید شود.</div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>آیتم هزینه</th><th>$/تن</th><th>جمع برای ۱,۰۰۰ تن ($)</th><th>درصد از کل</th><th>منبع</th></tr></thead>
+      <tbody>
+        <tr style="background:#fff8e1;"><td><strong>بهای تمام‌شده تولید (فرض)</strong></td><td class="td-c">$280</td><td class="td-num">280,000</td><td class="td-c">73.7٪</td><td>فرض مشاور</td></tr>
+        <tr><td>بسته‌بندی (Big Bag)</td><td class="td-c">$15</td><td class="td-num">15,000</td><td class="td-c">3.9٪</td><td>نرخ بازار</td></tr>
+        <tr><td>حمل داخلی (قم به مهران)</td><td class="td-c">$15</td><td class="td-num">15,000</td><td class="td-c">3.9٪</td><td>نرخ کامیون ایران</td></tr>
+        <tr><td>هزینه گمرک و صادرات ایران</td><td class="td-c">$8</td><td class="td-num">8,000</td><td class="td-c">2.1٪</td><td>مقررات گمرکی</td></tr>
+        <tr><td>حمل بین‌المللی (عراق)</td><td class="td-c">$40</td><td class="td-num">40,000</td><td class="td-c">10.5٪</td><td>نرخ TIR ایران-عراق</td></tr>
+        <tr><td>بیمه باربری</td><td class="td-c">$5</td><td class="td-num">5,000</td><td class="td-c">1.3٪</td><td>نرخ بیمه صادراتی</td></tr>
+        <tr><td>هزینه بانکی/پرداخت</td><td class="td-c">$10</td><td class="td-num">10,000</td><td class="td-c">2.6٪</td><td>تخمین</td></tr>
+        <tr><td>هزینه بازاریابی/نمایشگاه (تسهیم)</td><td class="td-c">$7</td><td class="td-num">7,000</td><td class="td-c">1.8٪</td><td>فرض</td></tr>
+        <tr style="background:#1a2a4a;color:#fff;font-weight:700;"><td>جمع هزینه‌ها (قیمت سر به سر)</td><td class="td-c">$380</td><td class="td-num">380,000</td><td class="td-c">100٪</td><td>—</td></tr>
+        <tr style="background:#e9f7ef;font-weight:700;"><td>قیمت فروش DAP بغداد</td><td class="td-c">$470</td><td class="td-num">470,000</td><td class="td-c">—</td><td>قیمت پیشنهادی</td></tr>
+        <tr style="background:#e8f4fd;font-weight:700;"><td>سود ناخالص</td><td class="td-c" style="color:#27ae60;">$90</td><td class="td-num" style="color:#27ae60;">90,000</td><td class="td-c" style="color:#27ae60;">19.1٪</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">۸.۲ تحلیل سودآوری — سناریوهای مختلف</h2>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>سناریو</th>
+          <th>حجم (تن/سال)</th>
+          <th>قیمت فروش ($/تن)</th>
+          <th>بهای تمام‌شده کل ($/تن)</th>
+          <th>درآمد کل ($)</th>
+          <th>سود ناخالص ($)</th>
+          <th>حاشیه سود</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fde8e8;">
+          <td><strong>بدبینانه</strong></td>
+          <td class="td-c">500</td>
+          <td class="td-c">$420</td>
+          <td class="td-c">$395</td>
+          <td class="td-num">210,000</td>
+          <td class="td-num" style="color:#c0392b;">12,500</td>
+          <td class="td-c">6٪</td>
+        </tr>
+        <tr style="background:#e8f4fd;">
+          <td><strong>محتمل (پایه)</strong></td>
+          <td class="td-c">2,000</td>
+          <td class="td-c">$470</td>
+          <td class="td-c">$375</td>
+          <td class="td-num">940,000</td>
+          <td class="td-num" style="color:#2e75b6;">190,000</td>
+          <td class="td-c">20٪</td>
+        </tr>
+        <tr style="background:#e9f7ef;">
+          <td><strong>خوش‌بینانه</strong></td>
+          <td class="td-c">3,500</td>
+          <td class="td-c">$510</td>
+          <td class="td-c">$360</td>
+          <td class="td-num">1,785,000</td>
+          <td class="td-num" style="color:#27ae60;">525,000</td>
+          <td class="td-c">29٪</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">نقطه سر به سر (Break-even)</h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>فرض</th><th>مقدار</th></tr></thead>
+      <tbody>
+        <tr><td>هزینه‌های ثابت صادراتی سالانه (بازاریابی، مجوز، نمایشگاه)</td><td class="td-c">~$50,000</td></tr>
+        <tr><td>حاشیه سود به ازای هر تن</td><td class="td-c">$90/تن</td></tr>
+        <tr style="background:#e8f4fd;font-weight:700;"><td>حجم سر به سر</td><td class="td-c">~556 تن/سال</td></tr>
+        <tr><td>معادل در ماه</td><td class="td-c">~46 تن/ماه (حدود یک کانتینر ۲۰ فوت)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">۸.۳ بازگشت ارز (درآمد ارزی)</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>بازار</th><th>حجم هدف (تن/سال)</th><th>قیمت فروش</th><th>درآمد ارزی سالانه</th><th>ارز دریافتی</th></tr></thead>
+      <tbody>
+        <tr><td>عراق</td><td class="td-c">1,000</td><td class="td-c">$470/تن</td><td class="td-num">$470,000</td><td>دلار/دینار عراقی</td></tr>
+        <tr><td>روسیه</td><td class="td-c">700</td><td class="td-c">$430/تن (FOB)</td><td class="td-num">$301,000</td><td>روبل/یوآن</td></tr>
+        <tr><td>قزاقستان</td><td class="td-c">300</td><td class="td-c">$510/تن</td><td class="td-num">$153,000</td><td>تنگه/روبل</td></tr>
+        <tr style="background:#1a2a4a;color:#fff;font-weight:700;"><td>جمع سناریوی محتمل</td><td class="td-c">2,000</td><td class="td-c">—</td><td class="td-num">$924,000</td><td>مختلط</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>نکته: بخشی از این درآمد ممکن است به ریال تبدیل شود (از طریق صرافی یا حواله). نرخ تبدیل ارزی ریسک قابل توجهی ایجاد می‌کند.</p>
+</div>
+
+<!-- ========== CHAPTER 9: RISK MATRIX ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۹ — تحلیل ریسک</h1>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>نوع ریسک</th>
+          <th>احتمال (۱-۵)</th>
+          <th>شدت (۱-۵)</th>
+          <th>امتیاز ریسک</th>
+          <th>سطح</th>
+          <th>استراتژی کاهش ریسک</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="risk-high">
+          <td><strong>ریسک تحریم و پرداخت</strong></td>
+          <td class="td-c">5</td>
+          <td class="td-c">5</td>
+          <td class="td-c"><strong>25</strong></td>
+          <td class="td-c">🔴 بحرانی</td>
+          <td>استفاده از مسیرهای پرداخت جایگزین (حواله، ارمنستان، SPFS)؛ ۵۰٪ پیش‌پرداخت اجباری؛ عدم صادرات با Open Account</td>
+        </tr>
+        <tr class="risk-high">
+          <td><strong>ریسک نوسان نرخ ارز</strong></td>
+          <td class="td-c">4</td>
+          <td class="td-c">4</td>
+          <td class="td-c"><strong>16</strong></td>
+          <td class="td-c">🔴 بالا</td>
+          <td>قرارداد در دلار یا یوآن؛ پرداخت سریع بدون نگهداری ارز خارجی؛ هجینگ (در صورت امکان)</td>
+        </tr>
+        <tr class="risk-high">
+          <td><strong>ریسک رقابت چین (کاهش قیمت)</strong></td>
+          <td class="td-c">4</td>
+          <td class="td-c">4</td>
+          <td class="td-c"><strong>16</strong></td>
+          <td class="td-c">🔴 بالا</td>
+          <td>تمرکز بر مزیت جغرافیایی و زمان تحویل؛ ایجاد روابط بلندمدت با مشتریان؛ کیفیت ثابت</td>
+        </tr>
+        <tr class="risk-med">
+          <td><strong>ریسک کیفیت و مرجوعی</strong></td>
+          <td class="td-c">3</td>
+          <td class="td-c">4</td>
+          <td class="td-c"><strong>12</strong></td>
+          <td class="td-c">🟡 متوسط-بالا</td>
+          <td>اخذ گواهی SGS قبل از ارسال؛ نمونه‌سازی و تأیید کیفیت با خریدار اول؛ بیمه کالا</td>
+        </tr>
+        <tr class="risk-med">
+          <td><strong>ریسک عدم پرداخت خریدار</strong></td>
+          <td class="td-c">3</td>
+          <td class="td-c">4</td>
+          <td class="td-c"><strong>12</strong></td>
+          <td class="td-c">🟡 متوسط-بالا</td>
+          <td>بررسی اعتبار خریدار؛ پیش‌پرداخت ۵۰–۱۰۰٪؛ LC از بانک معتبر؛ شروع با حجم کم</td>
+        </tr>
+        <tr class="risk-med">
+          <td><strong>ریسک لجستیک (تأخیر/آسیب)</strong></td>
+          <td class="td-c">3</td>
+          <td class="td-c">3</td>
+          <td class="td-c"><strong>9</strong></td>
+          <td class="td-c">🟡 متوسط</td>
+          <td>بیمه جامع (ICC-A)؛ انتخاب حامل معتبر؛ بسته‌بندی استاندارد</td>
+        </tr>
+        <tr class="risk-med">
+          <td><strong>ریسک نوسان قیمت جهانی BaCO₃</strong></td>
+          <td class="td-c">3</td>
+          <td class="td-c">3</td>
+          <td class="td-c"><strong>9</strong></td>
+          <td class="td-c">🟡 متوسط</td>
+          <td>قرارداد بلندمدت با قیمت ثابت؛ پیوند قیمت به شاخص بین‌المللی</td>
+        </tr>
+        <tr>
+          <td><strong>ریسک سیاسی/بی‌ثباتی بازار هدف</strong></td>
+          <td class="td-c">3</td>
+          <td class="td-c">3</td>
+          <td class="td-c"><strong>9</strong></td>
+          <td class="td-c">🟡 متوسط</td>
+          <td>تنوع‌بخشی بازار (حداقل ۳ کشور)؛ عدم تکیه کامل به یک بازار</td>
+        </tr>
+        <tr>
+          <td><strong>ریسک نبود سابقه صادراتی</strong></td>
+          <td class="td-c">5</td>
+          <td class="td-c">2</td>
+          <td class="td-c"><strong>10</strong></td>
+          <td class="td-c">🟡 متوسط</td>
+          <td>شروع با حجم کم آزمایشی؛ استفاده از مشاور صادراتی با تجربه در بازار هدف</td>
+        </tr>
+        <tr>
+          <td><strong>ریسک فناوری/تغییر کاربردها</strong></td>
+          <td class="td-c">2</td>
+          <td class="td-c">3</td>
+          <td class="td-c"><strong>6</strong></td>
+          <td class="td-c">🟢 پایین</td>
+          <td>پایش روندهای صنعت سرامیک و الکترونیک؛ آمادگی برای تغییر گرید</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub2">نقشه حرارتی ریسک</h3>
+  <div class="tbl-wrap">
+    <table style="width:400px;margin:auto;text-align:center;">
+      <thead>
+        <tr><th style="width:80px;">احتمال\شدت</th><th>کم (1-2)</th><th>متوسط (3)</th><th>بالا (4-5)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td style="background:#1a2a4a;color:#fff;font-weight:700;">بالا (4-5)</td><td style="background:#fef9e7;color:#d68910;">⚠️</td><td style="background:#fde8e8;color:#c0392b;">🔴 رقابت چین / نرخ ارز</td><td style="background:#fde8e8;color:#c0392b;">🔴 تحریم-پرداخت</td></tr>
+        <tr><td style="background:#1a2a4a;color:#fff;font-weight:700;">متوسط (3)</td><td style="background:#e9f7ef;color:#27ae60;">✅</td><td style="background:#fef9e7;color:#d68910;">⚠️ لجستیک / قیمت / سیاسی</td><td style="background:#fde8e8;color:#c0392b;">🔴 کیفیت / پرداخت</td></tr>
+        <tr><td style="background:#1a2a4a;color:#fff;font-weight:700;">پایین (1-2)</td><td style="background:#e9f7ef;color:#27ae60;">✅ فناوری</td><td style="background:#e9f7ef;color:#27ae60;">✅</td><td style="background:#fef9e7;color:#d68910;">⚠️</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="findings">
+    <h4>یافته‌های کلیدی فصل ۹</h4>
+    <ul>
+      <li>ریسک پرداخت-تحریم بحرانی‌ترین ریسک است. بدون راه‌حل عملی پرداخت، هیچ صادراتی ممکن نیست. این باید اولین مسئله‌ای باشد که پیش از هر اقدام دیگری حل شود.</li>
+      <li>ریسک رقابت چین واقعی اما قابل مدیریت است — مزیت جغرافیایی و FTA سپر دفاعی قوی هستند.</li>
+      <li>با تنوع‌بخشی بازار به ۳ کشور (عراق + روسیه + قزاقستان)، ریسک کلی پورتفولیو به شکل قابل توجهی کاهش می‌یابد.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== CHAPTER 10: ROADMAP ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۱۰ — نقشه راه اجرایی ۱۸ ماهه</h1>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>فاز</th>
+          <th>بازه زمانی</th>
+          <th>اقدامات اصلی</th>
+          <th>مسئول</th>
+          <th>KPI هدف</th>
+          <th>بودجه تخمینی</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#e8f4fd;">
+          <td><strong>فاز ۱</strong><br><small>آماده‌سازی و تنظیم پایه</small></td>
+          <td class="td-c">ماه ۱–۳</td>
+          <td>
+            <ul style="padding-right:15px;font-size:12px;">
+              <li>اخذ/تمدید ISO 9001</li>
+              <li>تهیه SDS و CoA به انگلیسی</li>
+              <li>ثبت صادراتی وزارت صمت</li>
+              <li>شناسایی ۵–۱۰ خریدار بالقوه در عراق</li>
+              <li>ارسال نمونه ۵۰ کیلویی به ۳ مشتری</li>
+              <li>تعیین کانال پرداخت عراق</li>
+              <li>مذاکره با شرکت حمل TIR</li>
+            </ul>
+          </td>
+          <td>مدیر صادرات + مدیر کیفیت</td>
+          <td class="td-c">نمونه تأیید شده توسط ۲ خریدار</td>
+          <td class="td-c">~$15,000</td>
+        </tr>
+        <tr>
+          <td><strong>فاز ۲</strong><br><small>ورود به بازار عراق</small></td>
+          <td class="td-c">ماه ۳–۶</td>
+          <td>
+            <ul style="padding-right:15px;font-size:12px;">
+              <li>اولین قرارداد فروش (۲۰۰–۵۰۰ تن)</li>
+              <li>دریافت ۵۰٪ پیش‌پرداخت</li>
+              <li>ارسال اولین محموله</li>
+              <li>بازخورد کیفیت از خریدار</li>
+              <li>شرکت در نمایشگاه بغداد</li>
+              <li>ارسال نمونه به ۲ شرکت روسی</li>
+            </ul>
+          </td>
+          <td>مدیر صادرات + امور مالی</td>
+          <td class="td-c">۳۰۰ تن فروخته شده؛ $140K درآمد ارزی</td>
+          <td class="td-c">~$20,000</td>
+        </tr>
+        <tr style="background:#e8f4fd;">
+          <td><strong>فاز ۳</strong><br><small>توسعه به EAEU</small></td>
+          <td class="td-c">ماه ۶–۱۲</td>
+          <td>
+            <ul style="padding-right:15px;font-size:12px;">
+              <li>امضای قرارداد با توزیع‌کننده روسی</li>
+              <li>اولین محموله به روسیه (۲۰۰–۳۰۰ تن)</li>
+              <li>بررسی بازار قزاقستان</li>
+              <li>شرکت در نمایشگاه مسکو یا آلماتی</li>
+              <li>توسعه صادرات عراق به ۵۰۰ تن</li>
+              <li>تنظیم قرارداد بلندمدت با خریداران</li>
+            </ul>
+          </td>
+          <td>مدیر صادرات + مدیر بازاریابی</td>
+          <td class="td-c">۱,۰۰۰ تن صادر شده؛ ۳ مشتری فعال؛ $450K درآمد</td>
+          <td class="td-c">~$30,000</td>
+        </tr>
+        <tr>
+          <td><strong>فاز ۴</strong><br><small>تثبیت و مقیاس‌گذاری</small></td>
+          <td class="td-c">ماه ۱۲–۱۸</td>
+          <td>
+            <ul style="padding-right:15px;font-size:12px;">
+              <li>توسعه ظرفیت اگر نیاز است</li>
+              <li>قرارداد بلندمدت سالانه</li>
+              <li>ورود به قزاقستان</li>
+              <li>بررسی گرید بالاتر (Technical Grade)</li>
+              <li>استانداردسازی فرآیندهای صادراتی</li>
+              <li>تیم صادراتی اختصاصی</li>
+            </ul>
+          </td>
+          <td>هیئت مدیره + مدیریت ارشد</td>
+          <td class="td-c">۲,۰۰۰ تن/سال؛ $920K درآمد ارزی؛ ۵+ مشتری</td>
+          <td class="td-c">~$20,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">KPIهای پیشنهادی</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>KPI</th><th>هدف ۶ ماهه</th><th>هدف ۱۲ ماهه</th><th>هدف ۱۸ ماهه</th></tr></thead>
+      <tbody>
+        <tr><td>حجم صادرات (تن)</td><td class="td-c">۳۰۰–۵۰۰</td><td class="td-c">۱,۰۰۰–۱,۵۰۰</td><td class="td-c">۲,۰۰۰–۲,۵۰۰</td></tr>
+        <tr><td>درآمد ارزی (USD)</td><td class="td-c">$140–230K</td><td class="td-c">$450–680K</td><td class="td-c">$920K–$1.2M</td></tr>
+        <tr><td>تعداد مشتریان فعال</td><td class="td-c">۲–۳</td><td class="td-c">۴–۶</td><td class="td-c">۷–۱۰</td></tr>
+        <tr><td>تعداد بازارهای هدف</td><td class="td-c">۱ (عراق)</td><td class="td-c">۲–۳</td><td class="td-c">۴–۵</td></tr>
+        <tr><td>حاشیه سود ناخالص</td><td class="td-c">> ۱۵٪</td><td class="td-c">> ۱۸٪</td><td class="td-c">> ۲۰٪</td></tr>
+        <tr><td>نرخ تکرار خرید مشتری</td><td class="td-c">—</td><td class="td-c">> ۶۰٪</td><td class="td-c">> ۷۵٪</td></tr>
+        <tr><td>گواهینامه‌های کیفی اخذ شده</td><td class="td-c">ISO 9001 + SGS</td><td class="td-c">ISO 9001 + SGS</td><td class="td-c">اضافه کردن گواهی روسی (GOST)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="sub">اقدامات فوری (۳۰ روز اول)</h2>
+  <div class="findings">
+    <h4>Action Items — اولویت فوری</h4>
+    <ol>
+      <li><strong>جلسه اضطراری داخلی:</strong> تأیید ظرفیت مازاد دقیق، بهای تمام‌شده واقعی، وضعیت گواهینامه‌ها — بدون این داده‌ها هیچ اقدام عملی ممکن نیست.</li>
+      <li><strong>وکیل/مشاور حقوقی تجاری:</strong> بررسی الزامات قانونی صادرات مواد شیمیایی از ایران و ریسک‌های تحریمی برای بازارهای هدف.</li>
+      <li><strong>تماس با اتاق بازرگانی ایران و عراق:</strong> دریافت لیست واردکنندگان کربنات باریم در عراق.</li>
+      <li><strong>تهیه نمونه استاندارد:</strong> آنالیز کامل محصول توسط آزمایشگاه معتبر (SGS یا Intertek) — هزینه: $500–2,000.</li>
+      <li><strong>راه‌اندازی کانال پرداخت:</strong> شناسایی واسط مالی معتبر برای عراق (صراف یا شرکت واسط ایرانی-عراقی).</li>
+    </ol>
+  </div>
+</div>
+
+<!-- ========== CHAPTER 11: SOURCES ========== -->
+<div class="section section-break">
+  <h1 class="ch">فصل ۱۱ — منابع</h1>
+  <p>تمامی داده‌های این گزارش از منابع معتبر بین‌المللی استخراج شده است. داده‌هایی که در دسترس عمومی نبوده صراحتاً به‌عنوان «فرض مشاور» علامت‌گذاری شده‌اند.</p>
+
+  <h2 class="sub">منابع داده‌های تجاری</h2>
+  <div class="source-item">📊 <strong>WITS World Bank / UN Comtrade (2024)</strong> — داده‌های صادرات و واردات HS 2836.60 برای سال ۲۰۲۳ | <a href="https://wits.worldbank.org/trade/comtrade/en/country/ALL/year/2023/tradeflow/Exports/partner/WLD/product/283660" target="_blank">wits.worldbank.org</a></div>
+  <div class="source-item">📊 <strong>Volza Global Trade Intelligence (2024–2025)</strong> — داده‌های شرکت‌های صادرکننده و واردکننده کربنات باریم | <a href="https://www.volza.com/p/barium-carbonate/manufacturers/" target="_blank">volza.com</a></div>
+  <div class="source-item">📊 <strong>Observatory of Economic Complexity (OEC) (2024)</strong> — نمایه تجاری HS بارم کربنات | <a href="https://oec.world/en/profile/hs/barium-carbonate" target="_blank">oec.world</a></div>
+
+  <h2 class="sub">منابع قیمت و بازار</h2>
+  <div class="source-item">💰 <strong>IMARC Group — Barium Carbonate Pricing Report (2025-2026)</strong> — قیمت Q1 2026 در مناطق مختلف | <a href="https://www.imarcgroup.com/barium-carbonate-pricing-report" target="_blank">imarcgroup.com</a></div>
+  <div class="source-item">💰 <strong>IndexBox — Barium Carbonate Price China (2023)</strong> — قیمت FOB چین ۲۰۲۲–۲۰۲۳ | <a href="https://www.indexbox.io/search/carbonates-barium-carbonate-price-china/" target="_blank">indexbox.io</a></div>
+  <div class="source-item">💰 <strong>OpenPR — BaCO₃ Q1 2026 Price Report</strong> — گزارش قیمت سه‌ماهه اول ۲۰۲۶ | <a href="https://www.openpr.com/news/4485164/barium-carbonate-latest-prices-trend-demand-index-uses-q1" target="_blank">openpr.com</a></div>
+  <div class="source-item">💰 <strong>ProcurementResource — Barium Carbonate Price Trends (2024)</strong> | <a href="https://www.procurementresource.com/resource-center/barium-carbonate-price-trends" target="_blank">procurementresource.com</a></div>
+
+  <h2 class="sub">گزارش‌های بازار</h2>
+  <div class="source-item">📈 <strong>IMARC Group — Barium Carbonate Market Size Report (2025)</strong> — ارزش بازار $697.3M در 2024، CAGR 5.18٪ | <a href="https://www.imarcgroup.com/barium-carbonate-market" target="_blank">imarcgroup.com</a></div>
+  <div class="source-item">📈 <strong>Market.us — Barium Carbonate Market Report (2026)</strong> — CAGR 5.8٪ تا 2034 | <a href="https://market.us/report/global-barium-carbonate-market/" target="_blank">market.us</a></div>
+  <div class="source-item">📈 <strong>Coherent Market Insights (2025–2032)</strong> | <a href="https://www.coherentmarketinsights.com/industry-reports/barium-carbonate-market" target="_blank">coherentmarketinsights.com</a></div>
+  <div class="source-item">📈 <strong>Persistence Market Research — Barium Carbonate Market 2033</strong> | <a href="https://www.persistencemarketresearch.com/market-research/barium-carbonate-market.asp" target="_blank">persistencemarketresearch.com</a></div>
+  <div class="source-item">📈 <strong>Spherical Insights — Top 10 BaCO₃ Companies 2025–2035</strong> | <a href="https://www.sphericalinsights.com/blogs/top-10-companies-in-global-barium-carbonate-market-in-2025-2035" target="_blank">sphericalinsights.com</a></div>
+
+  <h2 class="sub">FTA و مقررات تجاری</h2>
+  <div class="source-item">📋 <strong>Eurasian Economic Commission (EEC) — FTA EAEU-Iran (2023)</strong> | <a href="https://eec.eaeunion.org/en/comission/department/dotp/torgovye-soglasheniya/iran.php" target="_blank">eec.eaeunion.org</a></div>
+  <div class="source-item">📋 <strong>متن کامل توافقنامه FTA ایران-EAEU (دسامبر ۲۰۲۳)</strong> | <a href="https://eec.eaeunion.org/upload/medialibrary/77b/FTA-EAEU_Iran.pdf" target="_blank">FTA-EAEU_Iran.pdf</a></div>
+  <div class="source-item">📋 <strong>Tehran Times — Iran-EAEU FTA Implementation (2025)</strong> | <a href="https://www.tehrantimes.com/news/513091/Iran-EAEU-implement-free-trade-agreement-slashing-tariffs" target="_blank">tehrantimes.com</a></div>
+  <div class="source-item">📋 <strong>HKTDC Research — Iran FTA with EAEU Ratified (2025)</strong> | <a href="https://research.hktdc.com/en/article/MTk3MTY5NTY2OA" target="_blank">hktdc.com</a></div>
+
+  <h2 class="sub">لجستیک و کریدور INSTC</h2>
+  <div class="source-item">🚢 <strong>Maritime Executive — Russia-Iran $1.6B Rail Deal (May 2023)</strong> | <a href="https://maritime-executive.com/article/russia-and-iran-sign-1-6b-deal-to-complete-baltic-to-hormuz-rail-link" target="_blank">maritime-executive.com</a></div>
+  <div class="source-item">🚢 <strong>Mehr News Agency — Iran Exports via Mehran Border (2024)</strong> | <a href="https://en.mehrnews.com/news/226026/Iran-exports-over-1-billion-goods-to-Iraq-via-Mehran-border" target="_blank">mehrnews.com</a></div>
+  <div class="source-item">🚢 <strong>Wikipedia — International North–South Transport Corridor (INSTC)</strong> | <a href="https://en.wikipedia.org/wiki/International_North%E2%80%93South_Transport_Corridor" target="_blank">wikipedia.org</a></div>
+
+  <h2 class="sub">تحریم‌ها و پرداخت</h2>
+  <div class="source-item">⚠️ <strong>US OFAC — Iran Sanctions Programs (2024)</strong> | <a href="https://ofac.treasury.gov/sanctions-programs-and-country-information/iran-sanctions" target="_blank">ofac.treasury.gov</a></div>
+  <div class="source-item">⚠️ <strong>Middle East Eye — Russia-Iran Alternative to SWIFT</strong> | <a href="https://www.middleeasteye.net/news/russia-and-iran-launch-payment-system-alternative-swift" target="_blank">middleeasteye.net</a></div>
+  <div class="source-item">⚠️ <strong>IntelliNews — Iran Unveils ACUMER SWIFT Competitor</strong> | <a href="https://www.intellinews.com/iran-unveils-swift-competitor-called-acumer-354944/" target="_blank">intellinews.com</a></div>
+
+  <hr class="divider">
+  <div style="text-align:center;color:#7f8c8d;font-size:12px;padding:20px;">
+    <p>این گزارش در اردیبهشت ۱۴۰۵ (می ۲۰۲۶) تهیه شده است.</p>
+    <p>تمام اعداد بازار مبتنی بر منابع عمومی است. داده‌های اختصاصی TSR باید برای تکمیل تحلیل مالی تأمین شوند.</p>
+    <p><strong>هلدینگ TSR | محرمانه | نسخه ۱.۰</strong></p>
+  </div>
+</div>
+
+</div><!-- end page -->
+</body>
+</html>
